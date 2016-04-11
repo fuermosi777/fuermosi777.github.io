@@ -4,11 +4,15 @@
 
 @charset "utf-8";
 
+$color-gray: gray;
 $color-darkgray: #333;
 $color-blue: #2d89ef;
 
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import
         "Base",
-        "Nav"
+        "Index",
+        "Nav",
+        "Post",
+        "Projects"
 ;

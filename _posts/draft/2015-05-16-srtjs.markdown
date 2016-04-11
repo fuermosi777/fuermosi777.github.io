@@ -1,0 +1,21 @@
+---
+title: Srt.js - A JavaScript parser for SubRip(.srt) files
+layout: post
+category: project
+slug: srtjs
+color: gray
+tags:
+- JavaScript
+---
+
+[Srt.js][1] is a simple JavaScript parser for SubRip(.srt) files. You can easily parse a .srt subtitle file in the client side or in the server side using Node.js.
+
+I created it because I had a very bad experience in shifting subtitle files when I started to watch Shameless. Many subtitle files I found on the Internet are not sync with the shows. I can hardly find any simple software in mac to edit the subtitle files. I found a Python library called Pysrt though. It worked nice except that I had to write some lines if I want to shift multiple subtitles. Therefore I created this JavaScript `.srt` file parser so that it can be ran in the browser without setting any backend server.
+
+I have a [demo][1] website for uploading and shifting. There is no server-side code at all.
+
+For more information, please view the [Github repo][2] or [npm package page][3].
+
+[1]: http://fuermosi777.github.io/srtjs/
+[2]: https://github.com/fuermosi777/srtjs
+[3]: https://www.npmjs.com/package/srtjs

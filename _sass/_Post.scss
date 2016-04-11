@@ -1,0 +1,59 @@
+.Post {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 90px 0;
+    h1 {
+        font-size: 2rem;
+        font-weight: 300;
+        color: $color-darkgray;
+        margin-bottom: 20px;
+    }
+    .post-content {
+        font-size: 1.4rem;
+        color: $color-darkgray;
+        p {
+            margin-bottom: 20px;
+        }
+        a {
+            color: $color-blue;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+        blockquote {
+            background-color: #F9F9F9;
+            border-left: 5px solid #808080;
+            margin: 30px auto 35px;
+            padding: 15px 15px 1px;
+            width: 90%;
+        }
+        pre {
+            font-size: 1.3rem;
+            padding: 5px 10px;
+            border-left: 5px solid #cce9f5;
+            background: #fff;
+            margin: 15px auto 20px;
+            width: 90%;
+        }
+        code {
+            border-radius: 2px;
+            font-size: 1.3rem;
+            color: gray;
+            margin: 0 2px;
+            padding: 0 2px;
+        }
+        ul, ol {
+            margin: 0 0 20px 40px;
+            padding: 0;
+            font-size: 14px;
+            li {
+                list-style: circle;
+                margin: 0;
+                margin-bottom: 15px;
+            }
+        }
+        img {
+            max-width: 100%;
+        }
+    }
+}
