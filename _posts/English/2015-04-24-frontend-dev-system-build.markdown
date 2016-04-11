@@ -1,8 +1,7 @@
 ---
 title: The building of the frontend development system
 layout: post
-category: blog
-lang: en
+category: English
 tags:
 - Frontend
 - Module

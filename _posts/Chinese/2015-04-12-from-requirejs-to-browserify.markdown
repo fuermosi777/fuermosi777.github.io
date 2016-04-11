@@ -1,8 +1,7 @@
 ---
 title: 使用browserify进行JavaScript模块管理
 layout: post
-category: blog
-lang: cn
+category: Chinese
 tags:
 - JavaScript
 - Browserify
@@ -10,7 +9,7 @@ tags:
 - Gulp
 ---
 
-##前言
+## 前言
 
 前一段日子在使用了RequireJS之后觉得模块化开始实在太爽，它使用AMD语句，将整个模块包再一个`define`中然后以`return value`的形式提供接口。像这样：
 
@@ -60,7 +59,7 @@ define([
 
 - 使用RequireJS提供的`r.js`构建工具打包的时候，结果仅仅是按照依赖顺序把所有的模块丢到一个文件里，再在开始处加上`require.js`。有一个叫[almond][1]的插件可以替代巨大的`require.js`，但遗憾的是我从来没有用它成功构建过
 
-##Browserify
+## Browserify
 
 几天前我花了一段时间把company page的模块全部更换成了Browserify的模式，可以让我以node.js的风格在浏览器写代码了。一个直接的好处就是，代码更短了，而且更容易维护。[这篇文章][2]介绍了很多其他好处。[Browserify的官方网站][3]也提供一系列文章教程。上面的代码使用Browserify会变成如下：
 
@@ -79,7 +78,7 @@ Sth.prototype = {
 module.exports = Sth;
 ```
 
-##使用Gulp构建
+## 使用Gulp构建
 
 我一直使用Gulp来构建项目中的LESS和JavaScript文件。名叫`gulp-browserify`的插件由于“直接使用来自browserify模块”被加入了[Gulp的黑名单][5]。[这篇文章][6]提供了直接用browserify在Gulp中构建的解决办法，需要安装`browserify`和`vinyl-source-stream`。代码如下:
 
@@ -100,7 +99,7 @@ gulp.task('browserify', function() {
 
 我会先用browserify构建一个暂未压缩的js文件放到`/temp`中，以便排错，然后再用[uglify][7]压缩生成到`/public`文件中。
 
-##全局依赖
+## 全局依赖
 
 对于全局依赖的模块，比如jQuery，Browserify没有提供RequireJS中类似"shim"的东西。一个最直接的做法是在`main.js`中定义
 
@@ -115,7 +114,7 @@ gulp.task('browserify', function() {
 
 总体来说，从RequireJS转换到Browserify的过程很成功，效果也很好，暂时会作为前端开发的主力方案使用。
 
-##资料
+## 资料
 
 1. [Almond.js][1]
 2. [A Journey from requirejs to browerify][2]

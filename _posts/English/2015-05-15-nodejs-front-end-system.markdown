@@ -1,8 +1,7 @@
 ---
 title: Some ideas in front-end development based on Node.js
 layout: post
-category: blog
-lang: en
+category: English
 tags:
 - Node.js
 - Polymer

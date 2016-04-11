@@ -1,8 +1,7 @@
 ---
 title: 前端响应式设计与实现 - 一周工作总结
 layout: post
-category: blog
-lang: cn
+category: Chinese
 tags:
 - Responsive
 - Bootstrap
@@ -41,9 +40,5 @@ desktop		1450px		--px		lg
 三个breakpoint则分别是768px, 1024px和1450px。跟原本Bootstrap的设计并不同，因此需要在`varialble.less`的这份copy中修改。
 
 确定好了大体框架，剩下的过程就比较简单了。但是由于这个项目半路接手，并没有和设计师在一开始就确认好颜色、margin等重用的内容，因此后续的维护过程很麻烦。
-
-下图是设计师开始的设计，中间两个为协商之后添加的新版面。
-
-![](/media/blog/3.jpg)
 
 我使用[GluePrint](http://glueprintapp.com/)来确保设计的实现，最终误差不会超过1px。网站的最终效果放到了[Heroku](http://bg-company-page.herokuapp.com/)上。接下来需要对性能缓慢不堪的JavaScript进行优化。下周估计可以完成这个项目了。

@@ -1,8 +1,7 @@
 ---
 title: 传送门app更新至1.1版本
 layout: post
-category: blog
-lang: cn
+category: Chinese
 tags:
 - Objective-C
 ---

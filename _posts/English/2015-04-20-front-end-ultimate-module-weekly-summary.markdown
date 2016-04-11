@@ -1,8 +1,7 @@
 ---
 title: Front-end and backend separation - weekly summary
 layout: post
-category: blog
-lang: en
+category: English
 tags:
 - Node.js
 - Apache

@@ -1,8 +1,7 @@
 ---
 title: 前后端分离实践 - 一周工作总结
 layout: post
-category: blog
-lang: cn
+category: Chinese
 tags:
 - Node.js
 - Apache

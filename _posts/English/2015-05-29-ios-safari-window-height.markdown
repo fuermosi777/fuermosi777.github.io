@@ -1,7 +1,7 @@
 ---
 title: Quirks of height of viewable area in mobile Safari
 layout: post
-category: blog
+category: English
 tags:
 - Safari
 - JavaScript
@@ -14,9 +14,9 @@ When playing with Safari, I found that mobile Safari has a very weird feature (l
 
 As we can see from the following figures, the height of the viewable area before the bars are hidden is `window.innerHeight`. The return value is also `100vh` in desktop browsers because most desktop browser won't hide address bar when scrolling. The `100vh` in mobile Safari, however, equals to the screen height minus the menu bar and the minified address bar (with 20px height).
 
-![](/media/blog/6.jpg)
+![](/images/mobile1.jpg)
 
-![](/media/blog/7.jpg)
+![](/images/mobile2.jpg)
 
 In order to get that number in JavaScript, there is a `window.screen.availHeight`, which is not actually the available height because it still counts the minified address bar (20px). Therefore, the `100vh` in mobile Safari should be `window.screen.availHeight - 20` or `window.screen.height - 40`. This is a ugly hack because we don't know when Apple will change the height of the address bar to 24px or other.
 

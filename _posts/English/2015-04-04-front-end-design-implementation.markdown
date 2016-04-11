@@ -1,8 +1,7 @@
 ---
 title: Front-end responsive development - weekly summary
 layout: post
-category: blog
-lang: en
+category: English
 tags:
 - Responsive
 - Bootstrap
@@ -38,8 +37,6 @@ desktop		1450px		--px		lg
 
 The three breakpoints are 768px, 1024px and 1450px. Being different from the Bootstrap's design, it is necessary to edit in the customized `variable.less` file.
 
-The rest is easy after the confirmation of the layout. The following figure is the designer's origin design:
-
-![](/media/blog/3.jpg)
+The rest is easy after the confirmation of the layout. 
 
 I used [GluePrint](http://glueprintapp.com/) to make sure the implementation of the design. The errors were less than 1px. The demo of the page was hosted in [Heroku](http://bg-company-page.herokuapp.com/). Next week I am going to optimize the slow JavaScript.

@@ -1,8 +1,7 @@
 ---
 title: 从Sublime Text 3到Atom
 layout: post
-category: blog
-lang: cn
+category: Chinese
 tags:
 - Atom
 ---
@@ -12,8 +11,6 @@ tags:
 #安装Atom
 
 Atom是Github出品，其实质运行在浏览器引擎之特性也非常有趣。其最新版本可从[atom 网站][1]下载到。为了证明其本质是一个运行在Chromium的网页，在Atom新打开的页面使用快捷键`command`+`option`+`i`可以打开熟悉的开发界面。 
-
-![](/media/blog/2.png)
 
 #安装Monokai主题
 

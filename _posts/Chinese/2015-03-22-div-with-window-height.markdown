@@ -1,8 +1,7 @@
 ---
 title: 随窗口变化高度自动变化的div
 layout: post
-category: blog
-lang: cn
+category: Chinese
 tags:
 - JavaScript
 - jQuery

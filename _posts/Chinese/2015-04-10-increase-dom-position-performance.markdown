@@ -1,8 +1,7 @@
 ---
 title: 高效率DOM和CSS动画操作 - 一周工作总结
 layout: post
-category: blog
-lang: cn
+category: Chinese
 tags:
 - JavaScript
 - Animation
@@ -11,14 +10,6 @@ tags:
 ---
 
 由于开发的页面有几个涉及复杂动画的重DOM部分，测试页面在一些移动设备（iPad Mini 2，iPad 2和iPhone 6）上表现非常差，促使我不得不开始研究DOM动画的性能优化部分。本文旨在通过一个实际案例的开发过程来讨论利用JavaScript和CSS完成DOM动画和操作的一些优化。
-
-最开始收到设计师提供的设计稿（desktop）如下：
-
-![](/media/blog/4.png)
-
-而移动端的设计稿如下：
-
-![](/media/blog/5.png)
 
 这是一个介绍团队的页面。开始全部都是个人头像，当鼠标点击头像后会在相应行的下方展开一个较大的介绍页面，里面有一些个人信息。点击其他头像会动态切换资料。
 

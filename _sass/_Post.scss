@@ -11,6 +11,12 @@
     .post-content {
         font-size: 1.4rem;
         color: $color-darkgray;
+        h2 {
+            font-weight: 300;
+            margin-bottom: 10px;
+            padding-top: 10px;
+            font-size: 1.8rem;
+        }
         p {
             margin-bottom: 20px;
         }
@@ -53,6 +59,7 @@
             }
         }
         img {
+            margin-top: 10px;
             max-width: 100%;
         }
     }

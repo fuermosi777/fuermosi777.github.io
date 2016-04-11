@@ -1,0 +1,22 @@
+---
+layout: default
+title: 中文
+permalink: /cn
+---
+
+<div class="Index">
+    <div class="post-list">
+        {% for p in site.posts %}
+        {% if p.category == 'Chinese' %}
+        <div class="item">
+            <div class="date">
+                {{ p.date | date: '%m/%Y' }}
+            </div>
+            <div class="title">
+                <a href="{{ p.url }}">{{ p.title }}</a>
+            </div>
+        </div>
+        {% endif %}
+        {% endfor %}
+    </div>
+</div>

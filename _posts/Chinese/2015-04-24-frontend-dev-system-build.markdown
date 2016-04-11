@@ -1,8 +1,7 @@
 ---
 title: 前端开发体系建设
 layout: post
-category: blog
-lang: cn
+category: Chinese
 tags:
 - Frontend
 - Module

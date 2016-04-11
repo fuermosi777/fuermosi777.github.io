@@ -1,8 +1,7 @@
 ---
 title: 前端模块化开发 - 一周工作总结
 layout: post
-category: blog
-lang: cn
+category: Chinese
 tags:
 - RequireJS
 - LESS
@@ -17,7 +16,7 @@ tags:
 
 对于我个人来说我的前端经验非常有限，并没有收到过专业的训练，以前的项目也只是由于前端没有人所以匆忙上阵，页面草草设计了事，一切以简洁为主，对于复杂交互的前端页面经验全无。甚至在开始这个Landing Page的开发前期把所有的JavaScript代码全部丢到一个js文件了事。后果也异常明显——项目仅仅开发了第一代就因为混乱的JavaScript代码让我头痛不已，因此上一周痛下决心阅读大量文章开始了前端的模块化之路。
 
-#HTML
+## HTML
 
 开发伊始我以为这只是一个单页面应用，因此仅仅在工作目录里丢一个`index.html`作为入口，然后用gulp作为开发服务器，其中的livereload插件实在是前端神器，配合Sublime Text3使用天衣无缝。Johannes Schickling的[文章][1]给了我巨大帮助。
 
@@ -27,13 +26,13 @@ tags:
 
 有了后端服务器作支持，前端部件的模块化就太简单了。Express自带的Jade模板写HTML是一种享受，里面各种`include`和`extends`可以轻松进行单元测试。
 
-#CSS
+## CSS
 
 关于CSS要说的太多了。我被这门古老用法的语言折磨太久了。之前很多项目使用Bootstrap作为UI框架，会经常要修改一些Bootstrap的样式（可见Bootstrap实际上并不适合大项目的开发，因为它的默认样式太多），一般我的做法是对Bootstrap的源代码敬而远之，而是另起一个css文件再修改。Bootstrap的代码是LESS生成，因此这种后期添油加醋的做法长远来看无异于作死，很多时候一个简单的css文件被我搞成一千多行，非常混乱。
 
 最后决定使用LESS开发。像很多新手一样我对LESS还是SASS亦或是Stylus经历了一阵痛苦的选择恐惧症。后来我想到这项目时间紧迫根本没有时间允许我去选择什么编译器。最后我选择了一个看起来最顺眼，而且名字也一语双关的LESS。至于这选择是否正确尚未清楚，但是LESS像Jade一样，完全改变了我写CSS的模式，让简单的样式定义变成了一件起码来说不能算是无趣的事情。以后的项目我可能会接触学习一下SASS，但目前来看LESS已经满足我的大部分需求。
 
-#JavaScript
+## JavaScript
 
 JavaScript是我学过的第一门语言。但长期以来我对它的了解一直是在HTML直接添加几个onclick属性完成一些简单的工作（正如它被发明的原因），或者下载一些其他开发者写的jQuery插件完成一些较为复杂的需求。通读完《JavaScript高级程序设计》以后我才认清楚为什么人们常说JavaScript是一门结构松散的语言。
 
@@ -43,7 +42,7 @@ JavaScript是我学过的第一门语言。但长期以来我对它的了解一�
 
 其他方面需要考虑的还有JavaScript的性能优化。我现在写出来的一个模块运转还算正常，但是总有卡顿的感觉。下周会继续研究DOM的操作。
 
-#参考
+## 参考
 
 1. http://code.tutsplus.com/tutorials/gulp-as-a-development-web-server--cms-20903
 
