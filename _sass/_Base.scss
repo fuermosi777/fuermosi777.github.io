@@ -47,9 +47,11 @@ a:hover {
 }
 
 .post-list {
+    padding: 0 15px;
     .item {
         font-size: 1.4rem;
         margin-bottom: 6px;
+        display: flex;
         .date {
             color: $color-gray;
             display: inline-block;
@@ -76,12 +78,21 @@ a:hover {
             }
         }
     }
+    @media (max-width: 768px) {
+        padding: 0 10px;
+    }
     .item {
         width: 32%;
         display: inline-block;
         vertical-align: top;
         padding: 5px;
         margin-bottom: 5px;
+        @media (max-width: 768px) {
+            width: 49%;
+        }
+        @media (max-width: 420px) {
+            width: 100%;
+        }
         .bg {
             width: 100%;
             transition: all 0.2s;

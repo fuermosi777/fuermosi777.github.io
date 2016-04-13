@@ -1,6 +1,7 @@
 .About {
     .box {
-        width: 400px;
+        max-width: 400px;
+        min-width: 280px;
         margin: 100px auto 60px;
         .avatar {
             display: block; 
@@ -17,7 +18,9 @@
         }
         .job {
             margin-bottom: 20px;
+            padding: 0 15px;
             .item {
+                display: flex;
                 .meta {
                     display: inline-block;
                     width: 80px;
