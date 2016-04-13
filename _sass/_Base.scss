@@ -79,6 +79,9 @@ a:hover {
     .item {
         width: 32%;
         display: inline-block;
+        vertical-align: top;
+        padding: 5px;
+        margin-bottom: 5px;
         .bg {
             width: 100%;
             transition: all 0.2s;
@@ -87,8 +90,9 @@ a:hover {
             display: flex;
             justify-content: center;
             align-items: center;
+            border-radius: 3px;
             img {
-                transition: all 0.2s;
+                transition: all 0.1s;
                 display: block;
                 &.small {
                     height: 80px;
@@ -104,6 +108,42 @@ a:hover {
             &.blue {
                 background-color: #C9E4EE;
                 border: 1px solid #BDDEE9;
+            }
+            &.lemon {
+                background-color: #FAF8D0;
+                border: 1px solid #F1F0C9;
+            }
+            &.oysterpink {
+                background-color: #F4DAD5;
+                border: 1px solid #EECEC8;
+            }
+            &.white {
+                background-color: #F9FAFB;
+                border: 1px solid #EBEFF2;
+            }
+            &.foam {
+                background-color: #D9F6F7;
+                border: 1px solid #C4F0F0;
+            }
+            &.yellow {
+                background-color: #F8F3D8;
+                border: 1px solid #F0EAD1;
+            }
+            &.grayblue {
+                background-color: #E6EDF5;
+                border: 1px solid #DEE7F0;
+            }
+            &.darkblue {
+                background-color: #D0E0F4;
+                border: 1px solid #C1D6EE;
+            }
+            &.purple {
+                background-color: #D2B7E8;
+                border: 1px solid #C6A6DE;
+            }
+            &.orange {
+                background-color: #FBE1D1;
+                border: 1px solid #F2D9CA;
             }
         }
     }

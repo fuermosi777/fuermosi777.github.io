@@ -1,41 +1,39 @@
 ---
 title: Chuansongmen
-layout: post
+layout: project
 category: project
 slug: chuansongmen-app
-lang: en
-color: gray
-icon: wordmark2.png
+color: darkblue
+icon: csm.png
+iconsize: small
 tags:
 - Objective-C
 ---
 
-#Updates
+## Updates
 
-##v1.2
-
-5/12/2015
+v1.2 5/12/2015
 
 - Add "Read Later" for posts
 - Long press post in the list view and select "Read Later", you can read the post without the Internet
 
-##v1.1
-
-4/30/2015
+v1.1 4/30/2015
 
 - Added category cache to avoid crash
 - Click account author's avatar to see author's information
 - Fixed account paging bugs
 
-#Introduction
+## Introduction
 
 This app is the iOS version of [Chuansongmen][1], which has over 40,000 UVs per day. I was invited to join the development team of Chuansongmen and was responsible for developing the app. The app is heavily influenced by my previous work [StudentDaily][2] and another famous app [MONO][3].
 
-#Design
+![](/images/csm.jpg)
+
+## Design
 
 I was responsible for designing the app.
 
-#Development
+## Development
 
 I was responsible for developing the app. The first iteration app has the following functions:
 

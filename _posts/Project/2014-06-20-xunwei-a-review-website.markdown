@@ -1,6 +1,6 @@
 ---
 title: Xunwei – A business review website
-layout: post
+layout: project
 category: project
 icon: xunwei-website.png
 iconsize: big

@@ -1,36 +1,35 @@
 ---
-title: china-stock - a Python module retrieves SZ & SH stock data from Sina Finance
-layout: post
+title: WordMark – A lightweight markdown editor for Mac/Windows/Linux
+layout: project
 category: project
 slug: china-stock
 color: gray
 icon: wordmark2.png
 iconsize: small
 tags:
-- Python
+- Javascript
+- Electron
+- React
 ---
 
-[china-stock][1] is a Python module which can retrieves stock data from Chinese Shenzhen and Shanghai Stock exchanges.
+[WordMark](http://wordmarkapp.com) is not just a update of the WordMark 1.x, which was a Markdown editor only for WordPress writers. Besides some improvements to the performance and UI design, I basically re-wrote the entire app using a new framework.
 
-__Install__
+The new WordMark, is a light weight markdown editor for Mac/Windows/Linux.
 
-```
-$ pip install china-stock
-```
+The new framework is the essence of many of my explorations and thoughts in many real world projects such as WordMark 1.x, Chuansongmen React-native app, Ziyue.io, and Xun-wei, originally breed from [Redux](https://github.com/reactjs/redux) and yet became totally different from it in the following development. I will explain and discuss the feasible framework in my latest post.
 
-__Test__
+WordMark is my first powerful and yet lightweight desktop software developed using Javascript. Thanks to Electron (also known as Atom shell), it runs seamlessly on multiple platforms including OS X, Ubuntu and Windows. The user can create, edit and delete Markdown files using WordMark, and can publish the post to multiple platforms such as WordPress, Medium, Ghost, Blogger, Github, and so on. It not only inherit some best features of WordMark 1.x, but also add some very useful features.
 
-```
-$ python -m unittest tests/test.py
-```
+For the publishing feature, I developed a set of following SDKs myself:
 
-__Use__
+- WordPress SDK for Javascript
+- Medium SDK for Javascript
+- Ghost SDK for Javascript
+- Google Blogger SDK for Javascript
+- Imgur SDK for Javascript
 
-```
->>> from china_stock import Stock
->>> symbol_list = ['sh000001', 'sh000002', 'sh601006']
->>> stocks = Stock(symbol_list)
->>> stock = stocks.get_data[0]
-```
+I have learned and applied some cool features from iA writer 3, Byword, Caret, Mou, MacDown, Sublime Text 3, and so many other awesome tools. The application is designed, written and marketed all by myself.
 
-[1]:https://github.com/fuermosi777/china-stock
+[Buy & download][1]
+
+[1]: http://wordmarkapp.com
