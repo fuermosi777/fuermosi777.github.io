@@ -52,7 +52,7 @@ handleScroll(e) {
     let range = codeMirror.getRange({line: 0, ch: null}, {line: lineNumber, ch: null});
     var parser = new DOMParser();
     var doc = parser.parseFromString(marked(range), 'text/html');
-    let totalLines = doc.body.querySelectorAll('p, h1, h2, h3, h4, h5, h6, li, pre, blockquote');
+    let totalLines = doc.body.querySelectorAll('p, h1, h2, h3, h4, h5, h6, li, pre, blockquote, hr, table');
     return totalLines.length;
 }
 ```
@@ -62,7 +62,7 @@ In previewer, we get the target line position and then get the scrollTop based o
 ```
 shouldPreviewScroll(length) {
     let body = React.findDOMNode(this.refs.body);
-    let elems = body.querySelectorAll('p, h1, h2, h3, h4, h5, h6, li, pre, blockquote');
+    let elems = body.querySelectorAll('p, h1, h2, h3, h4, h5, h6, li, pre, blockquote, hr, table');
     if (elems.length > 0) {
         $(body).stop();
         $(body).animate({ scrollTop: elems[this.props.state.currentLine].offsetTop, queue: false });

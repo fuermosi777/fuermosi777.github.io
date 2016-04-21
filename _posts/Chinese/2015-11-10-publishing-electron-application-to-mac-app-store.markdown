@@ -7,6 +7,10 @@ tags:
 - Electron
 ---
 
+**2016年4月21日更新**
+
+根据这个[Issue](https://github.com/electron/electron/issues/3871#issuecomment-206724151)，似乎0.37的签名问题得到了解决。
+
 **2016年4月10日更新**
 
 由于Electron最近一次0.37升级中Chrome版本升级导致签名后的应用异常([issue](https://github.com/electron/electron/issues/3871#issuecomment-206724151))，在此情况下使用0.36.12版本。

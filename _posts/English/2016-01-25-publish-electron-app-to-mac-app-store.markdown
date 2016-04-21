@@ -7,6 +7,12 @@ tags:
 - MAS
 ---
 
+**Update 4/21/2016:**
+
+The Chrome 0.37 signing problem seems to be fixed by adding an entry to entitlements.
+
+[Issue](https://github.com/electron/electron/issues/3871#issuecomment-206724151)
+
 **Update 4/10/2016:**
 
 Due to a Chrome update of version 0.37, signed Electron app won't work properly according to this [issue](https://github.com/electron/electron/issues/3871#issuecomment-206724151). Using 0.36.12 is a better choice.

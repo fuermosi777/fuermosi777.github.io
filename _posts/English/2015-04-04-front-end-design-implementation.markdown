@@ -27,13 +27,12 @@ My solution upon this was that creating a `bootstrap.less` copy file and editing
 
 Bootstrap's grid system design is based on "fixed container" and "float window". In large devices, the widths of the containers between breakpoints are fixed while the widths of the windows are float. There are four mock-ups needed, which are "mobile", "portrait", "landscape", and "desktop". The sizes are as follows:
 
-```
-Type		min			max			code		
-mobile		0px			767px		xs		
-portrait	768px		1023px		sm
-landscape	1024px		1449px		md
-desktop		1450px		--px		lg
-```	
+|Type|min|max|code|
+|:---|:---|:---|:---|
+|mobile|0px|767px|xs|
+|portrait|768px|1023px|sm
+|landscape|1024px|1449px|md
+|desktop|1450px|--px|lg
 
 The three breakpoints are 768px, 1024px and 1450px. Being different from the Bootstrap's design, it is necessary to edit in the customized `variable.less` file.
 
