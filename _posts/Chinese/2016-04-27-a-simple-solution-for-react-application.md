@@ -1,7 +1,7 @@
 ---
 title: 记录一个优雅的React框架解决方案
-category: Chinese
 layout: post
+category: Chinese
 tags:
 - React
 - Javascript
