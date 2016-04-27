@@ -3,9 +3,7 @@ title: Understand UIWebView
 layout: post
 category: English
 tags:
-- PHP
-- MySQL
-- HTML/CSS
+- Objective-C
 ---
 
 When I was developing StudentDaily app, I was struggled for a long time in implementing view difference effect in Zhuhu Daily app. As in the following figure, the view is made up of a banner(`UIView`) and a browser(`UIWebView`). When you are scrolling down the `UIWebView` to read, the banner will be pushed up with a lower speed compared to the `UIWebView`.
