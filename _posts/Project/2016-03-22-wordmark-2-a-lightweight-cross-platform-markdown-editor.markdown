@@ -32,6 +32,6 @@ I have learned and applied some cool features from iA writer 3, Byword, Caret, M
 
 [Buy & download][1]
 
-In press: [MindStore.io](http://www.ifanr.com/660282), [Mac玩儿法](http://www.waerfa.com/wordmark)
+In press: [MindStore.io](http://www.ifanr.com/660282), [Mac玩儿法](http://www.waerfa.com/wordmark).
 
 [1]: http://wordmarkapp.com
