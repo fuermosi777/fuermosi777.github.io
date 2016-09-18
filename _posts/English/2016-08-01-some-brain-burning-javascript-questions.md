@@ -4,6 +4,7 @@ layout: post
 category: English
 tags:
 - Javascript
+- note
 ---
 
 Some of the questions are tricky, the others are traps. All of them are fun.
@@ -79,33 +80,3 @@ console.log(sum(1)(2)(4)); // -> 7
 console.log(sum(1, 2)(4)); // -> 7
 console.log(sum(1)(2, 4)); // -> 7
 ```
-
-> Declaring properties in construction vs. in Prototype?
-
-```javascript
-function A() {
-    this.p1 = 0;
-}
-
-A.prototype.p2 = 0;
-
-var a = new A();
-var b = new A();
-
-console.log(a.p1); // 0
-console.log(b.p1); // 0
-
-a.p1 = 2;
-
-console.log(a.p1); // 2
-console.log(b.p1); // 0
-
-A.prototype.p2 = 2;
-
-console.log(a.p2); // 2
-console.log(b.p2); // 2
-```
-
-> Declaring method in contruction vs. in Prototype?
-
-    http://stackoverflow.com/questions/9772307/declaring-javascript-object-method-in-constructor-function-vs-in-prototype

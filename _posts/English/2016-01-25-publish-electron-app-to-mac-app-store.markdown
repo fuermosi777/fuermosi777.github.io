@@ -7,6 +7,10 @@ tags:
 - MAS
 ---
 
+**Update 9/18/2016:**
+
+This post is outdated. Please follow the latest [guide](https://github.com/electron/electron/blob/master/docs/tutorial/mac-app-store-submission-guide.md). The only notable thing is that Electron does not support "bookmark" entitlement, which causes applications fail to open local file or folder after reboot. [Issue](https://github.com/electron/electron/issues/4637)
+
 **Update 4/21/2016:**
 
 The Chrome 0.37 signing problem seems to be fixed by adding an entry to entitlements.

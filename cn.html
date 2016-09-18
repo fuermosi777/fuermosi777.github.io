@@ -15,6 +15,13 @@ permalink: /cn
             <div class="title">
                 <a href="{{ p.url }}">{{ p.title }}</a>
             </div>
+            <div class="tag">
+                {% for t in p.tags %}
+                    {% if t == 'note' %}
+                    <span>Note</span>
+                    {% endif %}
+                {% endfor %}
+            </div>
         </div>
         {% endif %}
         {% endfor %}
