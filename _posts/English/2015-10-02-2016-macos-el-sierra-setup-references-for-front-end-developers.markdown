@@ -1,20 +1,22 @@
 ---
-title: 2015 OS X El Capitan Setup References for Front-end Developers
+title: 2015 MacOS Sierra Setup References for Front-end Developers
 layout: post
 category: English
 tags:
 - OS X
 ---
 
-This is a bootstrap guide for newbie front-end developers who recently got their first Mac or just downloaded the new OS X El Capitan and clear installed it. This guide is completely third-party and is only for reference because I know developers always have their own eccentricity based on the degree of their lazy.
+This is an updated version for El Capitan guide last year. It is basically a cheatsheet for me to finish the setup after a clean re-installation. This guide is completely third-party and is only for reference because I know developers always have their own eccentricity based on the degree of their lazy.
 
 ## System Preferences
 
+*   Backup all important files and folders in `~`
+*   Backup all setups and packages in Sublime text
 *   Backup `~/.ssh/id_rsa*` first. The reason is that you might want to have many SSH connections depending on this. Backup the `id_rsa` and `id_rsa.pub` by using the following command: `cp ~/.ssh/id_rsa* <your/backup/path>;`
 *   Setup Dock: this is completely personal.
 
     1.  Automatically hide and show the Dock
-    2.  Enable maginification;
+    2.  Enable magnification;
     3.  Minimize windows into application icon (not a fan of really long dock);
 
 ![](/images/Screen-Shot-2015-10-02-at-2.18.46-PM.png)
@@ -52,12 +54,13 @@ This is a bootstrap guide for newbie front-end developers who recently got their
         2.  HTML-CSS-JS Prettify
         3.  LESS
         4.  Jade
-        5.  Emmet
 
-        4.  Preferences:
+    4.  Preferences:
 
         *   `"translate_tabs_to_spaces": true`
         *   `"word_wrap": true`
+
+    5. Theme: [El-Capitan-Theme](https://github.com/iccir/El-Capitan-Theme)
 
 *   Install [Chrome](http://www.google.com/chrome/)
 *   Install [Alfred 2](https://www.alfredapp.com), setup shortcuts for apps (should install Powerpack)
@@ -88,9 +91,11 @@ This is a bootstrap guide for newbie front-end developers who recently got their
 
 ## Other apps
 
-*   Wechat
-*   Sip
-*   Sketch
-*   IntelliJ
-*   Skitch
-*   NetEase music
+* Wechat
+* Sip
+* Sketch
+* IntelliJ IDEA
+* Skitch
+* NetEase music
+* PDF Expert
+* ExpressVPN
