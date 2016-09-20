@@ -7,6 +7,10 @@ tags:
 - Electron
 ---
 
+**2016年9月17日更新**
+
+本文已经过时。按照最新版本的[指南](https://github.com/electron/electron/blob/master/docs/tutorial/mac-app-store-submission-guide.md)即可顺利发布。需注意的是，目前Electron不支持bookmark entitlement，导致某些应用需要存储本地文件的功能将在重启后失效。
+
 **2016年4月21日更新**
 
 根据这个[Issue](https://github.com/electron/electron/issues/3871#issuecomment-206724151)，似乎0.37的签名问题得到了解决。

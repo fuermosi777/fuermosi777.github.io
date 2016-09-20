@@ -4,9 +4,10 @@ layout: post
 category: English
 tags:
 - Javascript
+- note
 ---
 
-Some of the questions are tricky, the others are traps.
+Some of the questions are tricky, the others are traps. All of them are fun.
 
 > Print numbers 1 - 10 with 1 second lag
 
