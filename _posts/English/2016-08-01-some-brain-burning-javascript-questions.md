@@ -134,3 +134,28 @@ Array.prototype.all = function(func) {
 [1, 2, 3].all(isGreaterThanZero); // true
 [-1, 2, 3].all(isGreaterThanZero); // false
 ```
+
+> Reverse an array without using loop
+
+```javascript
+// use recursion
+var a = [1,2,3,4,5];
+
+function swap(array, i, j) {
+    var temp = array[i];
+    array[i] = array[j];
+    array[j] = temp;
+}
+
+function reverse(array, i) {
+    if (i < Math.floor((array.length - 1) / 2)) {
+        swap(array, i, array.length - 1 - i);
+        reverse(array, i + 1);
+    } else {
+        return;
+    }
+}
+
+reverse(a, 0);
+console.log(a);
+```
