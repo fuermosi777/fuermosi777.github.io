@@ -7,9 +7,12 @@ tags:
 - note
 ---
 
+* TOC
+{:toc}
+
 Some of the questions are tricky, the others are traps. All of them are fun.
 
-> Print numbers 1 - 10 with 1 second lag
+### 1. Print numbers 1 - 10 with 1 second lag - Beepi
 
 ```javascript
 // use setTimeout
@@ -53,7 +56,7 @@ for (var i = 1; i <= 10; i++) {
 }
 ```
 
-> If `sum(1, 2, 3) === 6`, make the following also work: `sum(1)(2, 3)`, `sum(1, 2)(3)`, `sum(1)(2)(3)`
+### 2. If `sum(1, 2, 3) === 6`, make the following also work: `sum(1)(2, 3)`, `sum(1, 2)(3)`, `sum(1)(2)(3)` - Beepi
 
 ```javascript
 function sum() {
@@ -81,9 +84,9 @@ console.log(sum(1, 2)(4)); // -> 7
 console.log(sum(1)(2, 4)); // -> 7
 ```
 
-> Create a cache function to cache functions that took 2s to run
-> For example, `complexFunction` has a runtime of 2s. The `cachedFunction` has a runtime of 2s when it first runs, and later it will return the result instantly
-> All functions that need to be cached will return a value and has no other side effects
+### 3. Create a cache function to cache functions that took 2s to run
+
+For example, `complexFunction` has a runtime of 2s. The `cachedFunction` has a runtime of 2s when it first runs, and later it will return the result instantly. All functions that need to be cached will return a value and has no other side effects
 
 ```javascript
 var complexFunction = function(arg1, arg2) {
@@ -114,7 +117,7 @@ var cachedFunction = cache(complexFunction);
 
 ```
 
-> Create the `all()` function that achieve this `[1, 2, 3].all(isGreaterThanZero); -> true`
+### 4. Create the `all()` function that achieve this `[1, 2, 3].all(isGreaterThanZero); -> true`
 
 ```javascript
 var isGreaterThanZero = function(num) {
@@ -135,7 +138,7 @@ Array.prototype.all = function(func) {
 [-1, 2, 3].all(isGreaterThanZero); // false
 ```
 
-> Reverse an array without using loop
+### 5. Reverse an array without using loop - SigFig
 
 ```javascript
 // use recursion
@@ -159,3 +162,34 @@ function reverse(array, i) {
 reverse(a, 0);
 console.log(a);
 ```
+
+### 6. Write a debounce function
+
+```javascript
+(function() {
+    function debounce(func, wait) {
+        var timeout = null;
+        return function() {
+            var that = this;
+            var arg = arguments;
+            if (timeout == null) {
+                func.apply(this, arg);
+                timeout = setTimeout(function() {
+                    clearTimeout(timeout);
+                    timeout = null;
+                }, wait);
+            }
+        }
+    }
+
+    var efficent = debounce(function(e) {
+        console.log(e.type);
+    }, 1000);
+
+    window.addEventListener('resize', efficent);
+})();
+```
+
+### 7. Decompress `3[abc]2[d]ef -> abcabcabcddef` - Google
+
+### 8. Calculate `(add (mul 2 3) 3 1)` - Affirm
