@@ -3,22 +3,35 @@
     margin: 0 auto;
     padding: 90px 15px;
     h1 {
-        font-size: 2rem;
+        font-size: 2.2rem;
         font-weight: 300;
         color: $color-darkgray;
         margin-bottom: 20px;
+        line-height: 1.25;
     }
     .post-content {
         font-size: 1.4rem;
         color: $color-darkgray;
         h2 {
             font-weight: 300;
-            margin-bottom: 10px;
-            padding-top: 10px;
-            font-size: 1.8rem;
+            padding-top: 3rem;
+            margin-bottom: 2rem;
+            font-size: 2rem;
+            line-height: 1.25;
+        }
+        h3 {
+            font-weight: 1.8rem;
+            line-height: 1.25;
+            font-weight: 300;
+            padding-top: 2rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid #d6d6d6;
+            margin: 0 0 1.2rem 0;
         }
         p {
-            margin-bottom: 20px;
+            margin-bottom: 1rem;
+            padding: 0;
+            line-height: 1.4;
         }
         a {
             color: $color-blue;
@@ -29,38 +42,45 @@
         blockquote {
             background-color: #F9F9F9;
             border-left: 5px solid #808080;
-            margin: 30px auto 35px;
+            margin: 30px 0 35px 0;
             padding: 15px 15px 1px;
             width: 90%;
         }
         pre {
             font-size: 1.3rem;
             padding: 5px 10px;
-            border-left: 5px solid #cce9f5;
-            background: #fff;
-            margin: 15px auto 20px;
-            width: 90%;
+            border: 1px solid #E6E6E6;
+            background: #F9FAFA;
+            border-radius: 4px;
+            overflow: auto;
+            margin: 15px 0 20px;
         }
         code {
+            font-family: Menlo, monospace;
             border-radius: 2px;
-            font-size: 1.3rem;
+            font-size: 1.2rem;
             color: gray;
             margin: 0 2px;
             padding: 0 2px;
         }
+        pre code {
+            font-size: 1rem;
+            background: transparent;
+        }
         ul, ol {
-            margin: 0 0 20px 40px;
+            margin: 18px 0 18px 30px;
             padding: 0;
             font-size: 14px;
             li {
-                list-style: circle;
-                margin: 0;
-                margin-bottom: 15px;
+                margin-bottom: 1rem;
+                line-height: 1.4;
             }
         }
         img {
-            margin-top: 10px;
-            max-width: 100%;
+            max-width: 80%;
+            display: block;
+            margin: 0px auto 20px;
+            text-align: center;
         }
     }
 }
