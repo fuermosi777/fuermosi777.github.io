@@ -12,7 +12,7 @@ tags:
 
 Some of the questions are tricky, the others are traps. All of them are fun.
 
-### 1. Print numbers 1 - 10 with 1 second lag - Beepi
+## 1. Print numbers 1 - 10 with 1 second lag - Beepi
 
 ```javascript
 // use setTimeout
@@ -56,7 +56,7 @@ for (var i = 1; i <= 10; i++) {
 }
 ```
 
-### 2. If `sum(1, 2, 3) === 6`, make the following also work: `sum(1)(2, 3)`, `sum(1, 2)(3)`, `sum(1)(2)(3)` - Beepi
+## 2. If `sum(1, 2, 3) === 6`, make the following also work: `sum(1)(2, 3)`, `sum(1, 2)(3)`, `sum(1)(2)(3)` - Beepi
 
 ```javascript
 function sum() {
@@ -84,7 +84,7 @@ console.log(sum(1, 2)(4)); // -> 7
 console.log(sum(1)(2, 4)); // -> 7
 ```
 
-### 3. Create a cache function to cache functions that took 2s to run
+## 3. Create a cache function to cache functions that took 2s to run
 
 For example, `complexFunction` has a runtime of 2s. The `cachedFunction` has a runtime of 2s when it first runs, and later it will return the result instantly. All functions that need to be cached will return a value and has no other side effects
 
@@ -117,7 +117,7 @@ var cachedFunction = cache(complexFunction);
 
 ```
 
-### 4. Create the `all()` function that achieve this `[1, 2, 3].all(isGreaterThanZero); -> true`
+## 4. Create the `all()` function that achieve this `[1, 2, 3].all(isGreaterThanZero); -> true`
 
 ```javascript
 var isGreaterThanZero = function(num) {
@@ -138,7 +138,7 @@ Array.prototype.all = function(func) {
 [-1, 2, 3].all(isGreaterThanZero); // false
 ```
 
-### 5. Reverse an array without using loop - SigFig
+## 5. Reverse an array without using loop - SigFig
 
 ```javascript
 // use recursion
@@ -163,7 +163,7 @@ reverse(a, 0);
 console.log(a);
 ```
 
-### 6. Write a debounce function
+## 6. Write a debounce function
 
 ```javascript
 (function() {
@@ -190,6 +190,6 @@ console.log(a);
 })();
 ```
 
-### 7. Decompress `3[abc]2[d]ef -> abcabcabcddef` - Google
+## 7. Decompress `3[abc]2[d]ef -> abcabcabcddef` - Google
 
-### 8. Calculate `(add (mul 2 3) 3 1)` - Affirm
+## 8. Calculate `(add (mul 2 3) 3 1)` - Affirm

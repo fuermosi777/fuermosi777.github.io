@@ -4,9 +4,9 @@
 
 @charset "utf-8";
 
-$color-gray: gray;
-$color-lightgray: lightgray;
-$color-darkgray: #333;
+$color-gray: #8898aa;
+$color-lightgray: #373e42;
+$color-darkgray: #292e31;
 $color-blue: #2d89ef;
 
 // Import partials from `sass_dir` (defaults to `_sass`)
@@ -17,5 +17,5 @@ $color-blue: #2d89ef;
         "Post",
         "Projects",
         "Project",
-        "About" 
+        "About"
 ;
