@@ -19,9 +19,14 @@ This is an updated version for El Capitan guide last year. It is basically a che
 
 Backup all important files and folders in `~` (music and photos if necessary)
 
-Backup all setups and packages in Sublime text
+Backup all setups and packages in Sublime text:
 
-Backup `~/.ssh/id_rsa*`: the reason is that you might want to have many SSH connections depending on this. Backup the `id_rsa` and `id_rsa.pub` by using the following command: 
+    `$ cd ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/`
+    `$ mkdir ~/Dropbox/Sublime`
+    `$ mv User ~/Dropbox/Sublime/`
+    `$ ln -s ~/Dropbox/Sublime/User`
+
+Backup `~/.ssh/id_rsa*`: the reason is that you might want to have many SSH connections depending on this. Backup the `id_rsa` and `id_rsa.pub` by using the following command:
 
     $ cp -r ~/.ssh <your/backup/path>;
 
@@ -54,23 +59,18 @@ Backup `~/.ssh/id_rsa*`: the reason is that you might want to have many SSH conn
 * Download Xcode (Start it and agree with terms)
 * Install [Sublime Text 3](http://www.sublimetext.com/3)
 
-    1. View > Sidebar > Show open files
-    2. Install [Package control](https://packagecontrol.io/installation)
-    3. Must-have Plugin list:
+    1. Restore settings from Dropbox:
 
-        1. Babel
-        2. HTML-CSS-JS Prettify
-        3. LESS
-        4. Jade
-        5. GitGutter
-        6. Sass
-
-    4. Preferences:
-
-        * `"translate_tabs_to_spaces": true`
-        * `"word_wrap": true`
+        `$ cd ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/`
+        `$ rm -r User`
+        `$ ln -s ~/Dropbox/Sublime/User`
 
     5. Theme: [El-Capitan-Theme](https://github.com/iccir/El-Capitan-Theme)
+* Install [Atom](https://atom.io/)
+
+    1. Restore atom settings from Dropbox:
+
+        `$ ln -s ~/Dropbox/Apps/Atom/.atom ~/.atom`
 
 * Install [Chrome](http://www.google.com/chrome/)
 
@@ -78,12 +78,12 @@ Install Command Line Tools:
 
     $ xcode-select --install
 
-Install Homebrew: 
+Install Homebrew:
 
     $ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/masterinstall)"`
     $ brew update
 
-Install Node.js 
+Install Node.js
 
     $ brew install node
 
@@ -93,11 +93,11 @@ Install zsh and oh-my-zsh:
     $ sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/mastertools/install.sh)"`
 `/usr/local/bin/zsh`
 
-Install Postgres: 
+Install Postgres:
 
     $ brew install postgresql
 
-Install MySQL: 
+Install MySQL:
 
     $ brew install mysql
 
