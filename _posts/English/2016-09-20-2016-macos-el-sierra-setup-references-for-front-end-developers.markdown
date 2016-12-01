@@ -19,12 +19,12 @@ This is an updated version for El Capitan guide last year. It is basically a che
 
 Backup all important files and folders in `~` (music and photos if necessary)
 
-Backup all setups and packages in Sublime text:
+Backup all setups and packages in Sublime text (need to do only once):
 
-    `$ cd ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/`
-    `$ mkdir ~/Dropbox/Sublime`
-    `$ mv User ~/Dropbox/Sublime/`
-    `$ ln -s ~/Dropbox/Sublime/User`
+    $ cd ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/
+    $ mkdir ~/Dropbox/apps/Sublime
+    $ mv User ~/Dropbox/apps/Sublime/
+    $ ln -s ~/Dropbox/apps/Sublime/User
 
 Backup `~/.ssh/id_rsa*`: the reason is that you might want to have many SSH connections depending on this. Backup the `id_rsa` and `id_rsa.pub` by using the following command:
 
@@ -61,11 +61,13 @@ Backup `~/.ssh/id_rsa*`: the reason is that you might want to have many SSH conn
 
     1. Restore settings from Dropbox:
 
-        `$ cd ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/`
-        `$ rm -r User`
-        `$ ln -s ~/Dropbox/Sublime/User`
+        - `$ cd ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/`
+        - `$ rm -r User`
+        - `$ ln -s ~/Dropbox/apps/Sublime/User`
 
-    5. Theme: [El-Capitan-Theme](https://github.com/iccir/El-Capitan-Theme)
+    2. Install package control: `cmd+shift+p` -> install package control
+    3. Theme: [El-Capitan-Theme](https://github.com/iccir/El-Capitan-Theme)
+
 * Install [Atom](https://atom.io/)
 
     1. Restore atom settings from Dropbox:
