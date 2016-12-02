@@ -147,6 +147,12 @@ Install Jekyll:
 
     $ gem install github-pages
 
+## Setup Hammerspoon (for shortcuts)
+
+[Download](http://www.hammerspoon.org/). Configuration files hosted on [Github](https://github.com/fuermosi777/hammerspoon-config).
+
+Clone it to `~/.hammerspoon`.
+
 ## Other apps
 
 * Dropbox
@@ -164,6 +170,5 @@ Install Jekyll:
 * Newton
 * [Wunderlist](https://itunes.apple.com/app/wunderlist-to-do-list-tasks/id410628904)
 * [AppCleaner](https://freemacsoft.net/appcleaner/)
-* [Apptivate](http://www.apptivateapp.com/): setup Finder - `/System/Library/CoreServices/Finder.app`
 * [Spectacle](https://www.spectacleapp.com/)
 * Beamer
