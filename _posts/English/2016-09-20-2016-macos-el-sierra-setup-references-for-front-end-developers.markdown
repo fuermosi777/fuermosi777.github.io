@@ -63,7 +63,9 @@ Backup `~/.ssh/id_rsa*`: the reason is that you might want to have many SSH conn
 
         - `$ cd ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/`
         - `$ rm -r User`
+        - `$ rm -r Colorsublime-Themes`
         - `$ ln -s ~/Dropbox/apps/Sublime/User`
+        - `$ ln -s ~/Dropbox/apps/Sublime/Colorsublime-Themes`
 
     2. Install package control: `cmd+shift+p` -> install package control
     3. Theme: [El-Capitan-Theme](https://github.com/iccir/El-Capitan-Theme)
