@@ -63,14 +63,15 @@ Backup `~/.ssh/id_rsa*`: the reason is that you might want to have many SSH conn
 
         `$ cd ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/`
         `$ rm -r User`
-        `$ ln -s ~/Dropbox/Sublime/User`
+        `$ ln -s ~/Dropbox/apps/Sublime/User`
+        `$ ln -s ~/Dropbox/apps/Sublime/Colorsublime-Themes`
 
     5. Theme: [El-Capitan-Theme](https://github.com/iccir/El-Capitan-Theme)
 * Install [Atom](https://atom.io/)
 
     1. Restore atom settings from Dropbox:
 
-        `$ ln -s ~/Dropbox/Apps/Atom/.atom ~/.atom`
+        `$ ln -s ~/Dropbox/apps/Atom/.atom ~/.atom`
 
 * Install [Chrome](http://www.google.com/chrome/)
 
