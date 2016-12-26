@@ -19,12 +19,12 @@ This is an updated version for El Capitan guide last year. It is basically a che
 
 Backup all important files and folders in `~` (music and photos if necessary)
 
-Backup all setups and packages in Sublime text:
+Backup all setups and packages in Sublime text (need to do only once):
 
-    `$ cd ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/`
-    `$ mkdir ~/Dropbox/Sublime`
-    `$ mv User ~/Dropbox/Sublime/`
-    `$ ln -s ~/Dropbox/Sublime/User`
+    $ cd ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/
+    $ mkdir ~/Dropbox/apps/Sublime
+    $ mv User ~/Dropbox/apps/Sublime/
+    $ ln -s ~/Dropbox/apps/Sublime/User
 
 Backup `~/.ssh/id_rsa*`: the reason is that you might want to have many SSH connections depending on this. Backup the `id_rsa` and `id_rsa.pub` by using the following command:
 
@@ -61,12 +61,22 @@ Backup `~/.ssh/id_rsa*`: the reason is that you might want to have many SSH conn
 
     1. Restore settings from Dropbox:
 
+<<<<<<< HEAD
         `$ cd ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/`
         `$ rm -r User`
         `$ ln -s ~/Dropbox/apps/Sublime/User`
         `$ ln -s ~/Dropbox/apps/Sublime/Colorsublime-Themes`
+=======
+        - `$ cd ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/`
+        - `$ rm -r User`
+        - `$ rm -r Colorsublime-Themes`
+        - `$ ln -s ~/Dropbox/apps/Sublime/User`
+        - `$ ln -s ~/Dropbox/apps/Sublime/Colorsublime-Themes`
 
-    5. Theme: [El-Capitan-Theme](https://github.com/iccir/El-Capitan-Theme)
+    2. Install package control: `cmd+shift+p` -> install package control
+    3. Theme: [El-Capitan-Theme](https://github.com/iccir/El-Capitan-Theme)
+>>>>>>> 196bd097a583b1932da6d3d83cac0348472abaa4
+
 * Install [Atom](https://atom.io/)
 
     1. Restore atom settings from Dropbox:
@@ -146,6 +156,12 @@ Install Jekyll:
 
     $ gem install github-pages
 
+## Setup Hammerspoon (for shortcuts)
+
+[Download](http://www.hammerspoon.org/). Configuration files hosted on [Github](https://github.com/fuermosi777/hammerspoon-config).
+
+Clone it to `~/.hammerspoon`.
+
 ## Other apps
 
 * Dropbox
@@ -163,6 +179,5 @@ Install Jekyll:
 * Newton
 * [Wunderlist](https://itunes.apple.com/app/wunderlist-to-do-list-tasks/id410628904)
 * [AppCleaner](https://freemacsoft.net/appcleaner/)
-* [Apptivate](http://www.apptivateapp.com/): setup Finder - `/System/Library/CoreServices/Finder.app`
 * [Spectacle](https://www.spectacleapp.com/)
 * Beamer
