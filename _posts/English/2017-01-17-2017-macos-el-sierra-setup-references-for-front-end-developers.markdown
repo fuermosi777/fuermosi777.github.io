@@ -1,5 +1,5 @@
 ---
-title: 2016 MacOS Sierra Setup References for Front-end Developers
+title: 2017 MacOS Sierra Setup References for Front-end Developers
 layout: post
 category: English
 tags:
@@ -41,7 +41,7 @@ Backup `~/.ssh/id_rsa*`: the reason is that you might want to have many SSH conn
 ![](/images/Screen-Shot-2015-10-02-at-2.18.46-PM.png)
 
 * Download [Scroll Reverser](https://pilotmoon.com/scrollreverser/). I like the nature scroll action of touchpad, but I just can't accept it when using mouse. This tool helps me to reverse the scroll direction of the mouse.
-* Download [Sogou input method](http://pinyin.sogou.com/mac/?r=pinyin) (System Preferences > Keyboard > check Automatically switch to a document’s input source): if you are a Chinese speaker, then you will know how irreplaceable this app is; Enable shortcut ^ + space to switch to last method.
+* Download [Sogou input method](http://pinyin.sogou.com/mac/?r=pinyin) (System Preferences > Keyboard > check Automatically switch to a document’s input source): if you are a Chinese speaker, then you will know how irreplaceable this app is; Disable caps lock key; Download [Karabiner-Elements](https://github.com/tekezo/Karabiner-Elements) to reflect caps lock key to F19; set F19 as the shortcut for "next input method"
 
 * System Preferences > Trackpad > Tap to click.
 * Enable three-finger drag: System Preferences > Accessibility > Mouse Trackpad > Trackpad Options > Enable dragging (three fingers). This is a killer function when using Mac's touchpad. Don't know why Apple move this switch to this weird place.
