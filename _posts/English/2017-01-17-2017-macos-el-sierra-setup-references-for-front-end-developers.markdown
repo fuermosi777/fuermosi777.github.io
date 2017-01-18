@@ -61,12 +61,6 @@ Backup `~/.ssh/id_rsa*`: the reason is that you might want to have many SSH conn
 
     1. Restore settings from Dropbox:
 
-<<<<<<< HEAD
-        `$ cd ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/`
-        `$ rm -r User`
-        `$ ln -s ~/Dropbox/apps/Sublime/User`
-        `$ ln -s ~/Dropbox/apps/Sublime/Colorsublime-Themes`
-=======
         - `$ cd ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/`
         - `$ rm -r User`
         - `$ rm -r Colorsublime-Themes`
@@ -75,7 +69,6 @@ Backup `~/.ssh/id_rsa*`: the reason is that you might want to have many SSH conn
 
     2. Install package control: `cmd+shift+p` -> install package control
     3. Theme: [El-Capitan-Theme](https://github.com/iccir/El-Capitan-Theme)
->>>>>>> 196bd097a583b1932da6d3d83cac0348472abaa4
 
 * Install [Atom](https://atom.io/)
 
