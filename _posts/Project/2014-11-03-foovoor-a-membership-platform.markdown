@@ -1,10 +1,12 @@
 ---
 title: Foovoor
+subtitle: A loyalty program service for restaurant
 layout: project
 category: project
-icon: foovoor.png
-iconsize: small
-color: oysterpink
+image: foovoor.png
+imagesize: small
+color: DD523C
+bgcolor: F4CBC4
 tags:
 - Python
 - Django

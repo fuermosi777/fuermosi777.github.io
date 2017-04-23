@@ -1,11 +1,14 @@
 ---
-title: WordMark – A lightweight markdown editor for Mac/Windows/Linux
+title: WordMark
+subtitle: A lightweight markdown editor
 layout: project
 category: project
 slug: china-stock
-color: gray
-icon: wordmark2.png
-iconsize: small
+color: 5AB3EE
+bgcolor: B5E0FB
+image: wordmark2.png
+imagesize: small
+website: http://wordmarkapp.com/
 tags:
 - Javascript
 - Electron

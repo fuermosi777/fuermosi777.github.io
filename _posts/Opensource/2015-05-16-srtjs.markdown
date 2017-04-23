@@ -1,10 +1,10 @@
 ---
-title: Srt.js - A JavaScript parser for SubRip(.srt) files
+title: Srt.js
+subtitle: A JavaScript parser for srt
 layout: project
-category: project
-icon: srtjs.png
-iconsize: big
-color: grayblue
+category: opensource
+image: srtjs.png
+bgcolor: 4C728E
 tags:
 - JavaScript
 ---

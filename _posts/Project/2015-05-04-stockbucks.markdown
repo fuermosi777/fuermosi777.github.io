@@ -1,10 +1,11 @@
 ---
-title: Stockbucks - a web app for stock search
+title: Stockbucks
+subtitle: A web app for stock search
 layout: project
 category: project
-icon: stockbucks.png
-iconsize: big
-color: yellow
+image: stockbucks.png
+color: F5A737
+bgcolor: F5F1B3
 tags:
 - Django
 - Python

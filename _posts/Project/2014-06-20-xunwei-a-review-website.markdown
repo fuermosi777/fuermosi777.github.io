@@ -1,10 +1,11 @@
 ---
-title: Xunwei – A business review website
+title: Xunwei
+subtitle: A restaurant review website
 layout: project
 category: project
-icon: xunwei-website.png
-iconsize: big
-color: blue
+image: xunwei-website.png
+color: 4FC9DE
+bgcolor: 4FC9DE
 tags:
 - Python
 - Django

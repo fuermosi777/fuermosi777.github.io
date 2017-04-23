@@ -1,10 +1,11 @@
 ---
-title: Q – a quantitative technical analysis platform
+title: Q
+subtitle: A quantitative technical analysis platform
 layout: project
 category: project
-color: oysterpink
-icon: q.png
-iconsize: big
+color: E47878
+bgcolor: E47878
+image: q.png
 tags:
 - Python
 - Javascript

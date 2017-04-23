@@ -1,10 +1,12 @@
 ---
-title: Xunwei - A restaurant review app
+title: Xunwei
+subtitle: A restaurant review app
 layout: project
 category: project
-icon: xunwei-ios.png
-iconsize: small
-color: lemon
+image: xunwei-ios.png
+imagesize: small
+color: FCA83F
+bgcolor: FDD39F
 tags:
 - Objective-C
 - Cocoa

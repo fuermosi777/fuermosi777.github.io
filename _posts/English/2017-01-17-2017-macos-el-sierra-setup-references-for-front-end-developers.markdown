@@ -6,8 +6,6 @@ tags:
 - macOS
 ---
 
-Table of Contents
-
 * TOC
 {:toc}
 

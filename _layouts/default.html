@@ -4,12 +4,10 @@
   {% include head.html %}
 
   <body>
-
-    {% include Nav.html %}
-
-    {{ content }}
-
-    {% include About.html %}
+    <div class="main-content">
+      {{ content }}
+      {% include about.html %}
+    </div>
     <!-- Start of StatCounter Code for Default Guide -->
     <script type="text/javascript">
     var sc_project=10208315;

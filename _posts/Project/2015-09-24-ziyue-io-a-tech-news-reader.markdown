@@ -1,10 +1,11 @@
 ---
-title: Ziyue.io – A tech news reader
+title: Ziyue.io
+subtitle: A tech news reader
 layout: project
 category: project
-color: grayblue
-icon: ziyue.png
-iconsize: big
+color: 21C1B1
+bgcolor: 21C1B1
+image: ziyue.png
 tags:
 - Javascript
 - React

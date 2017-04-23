@@ -1,11 +1,13 @@
 ---
 title: Chuansongmen
+subtitle: A news app
 layout: project
 category: project
 slug: chuansongmen-app
-color: darkblue
-icon: csm.png
-iconsize: small
+color: 137BDC
+bgcolor: B8D7F4
+image: csm.png
+imagesize: small
 tags:
 - Objective-C
 ---

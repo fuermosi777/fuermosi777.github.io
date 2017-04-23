@@ -1,10 +1,11 @@
 ---
 title: New Xunwei
+subtitle: A restaurant review webapp
 layout: project
 category: project
-color: orange
-icon: xunwei-2.png
-iconsize: big
+color: EC7F54
+bgcolor: FACDAC
+image: xunwei-2.png
 tags:
 - Javascript
 - React

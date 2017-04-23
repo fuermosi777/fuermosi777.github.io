@@ -1,10 +1,10 @@
 ---
-title: china-stock - a Python module retrieves SZ & SH stock data from Sina Finance
+title: china-stock
+subtitle: A Python module retrieves stock data
 layout: project
-category: project
-color: purple
-icon: china-stock.png
-iconsize: big
+category: opensource
+bgcolor: B67BDF
+image: china-stock.png
 tags:
 - Python
 ---

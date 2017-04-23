@@ -2,13 +2,31 @@
 layout: default
 ---
 
-<div class="Project {{ page.color}}">
-    <img src="/images/{{ page.icon }}" class="{{ page.iconsize }}"/>
+<div class="title-bar high"></div>
+<div class="grid-space high">
+  <div class="col-1 grid-link" style="background-color: #{{ page.bgcolor }};">
+    <img class="grid-image {{ page.imagesize }}" src="/images/{{ page.image }}" />
+  </div>
+  <div class="col-1 grid-link" style="background-color: #{{ page.bgcolor }}; opacity: 0.6;"></div>
+  <div class="col-1 grid-link" style="background-color: #{{ page.bgcolor }}; opacity: 0.4;"></div>
+  <div class="col-1 grid-link" style="background-color: #{{ page.bgcolor }}; opacity: 0.2;"></div>
 </div>
 
-<div class="Post">
-    <h1>{{ page.title }}</h1>
-    <div class="post-content">
-        {{ content }}
-    </div>
+<div class="title-bar">
+  <div class="col-1 large-text">{{ page.title }}</div>
+  <div class="col-2 medium-text">{{ page.subtitle }}</div>
+  <div class="col-1">
+    {% if page.website %}
+      <a class="button" href="{{ page.website }}" style="background-color: #{{ page.color }};">View website</a>
+    {% elsif page.github %}
+      <a class="button" href="{{ page.github }}"style="background-color: #{{ page.color }};">View on Github</a>
+    {% endif %}
+  </div>
+</div>
+
+<div class="grid-space">
+  <div class="col-1"></div>
+  <div class="col-3 page-text">
+    {{ content }}
+  </div>
 </div>
