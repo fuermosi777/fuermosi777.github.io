@@ -116,11 +116,13 @@ a {
     text-align: center;
     margin-left: -33%;
     width: 133%;
+  }
+}
 
-    @media screen and (max-width: 800px) {
-      max-width: 100%;
-      margin-left: 0;
-    }
+.project-text {
+  @media screen and (max-width: 800px) {
+    max-width: 100%;
+    margin-left: 0;
   }
 }
 
