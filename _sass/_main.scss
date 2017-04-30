@@ -114,13 +114,8 @@ a {
     display: block;
     margin: 20px 0;
     text-align: center;
-    margin-left: -33%;
-    width: 133%;
-
-    @media screen and (max-width: 800px) {
-      max-width: 100%;
-      margin-left: 0;
-    }
+    max-width: 100%;
+    margin-left: 0;
   }
 }
 
@@ -155,6 +150,30 @@ a {
 
     @media screen and (max-width: 800px) {
       padding: 10px 0;
+    }
+  }
+}
+
+.project-title-bar {
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .image-box {
+    img {
+      max-height: 80px;
+    }
+  }
+  .title-box {
+    margin-left: 20px;
+    .title {
+      color: white;
+      font-size: 26px;
+    }
+    .subtitle {
+      color: white;
+      font-size: 12px;
+      margin-bottom: 10px;
     }
   }
 }
@@ -258,7 +277,7 @@ a.button {
   box-shadow: 0 0 2px 0 rgba(0,0,0,0.1), 0 2px 2px 0 rgba(0,0,0,0.1);
   font-size: 15px;
   color: white;
-  border-radius: 3px;
+  border-radius: 8px;
   position: relative;
   transition: opacity 0.2s;
   display: inline-block;

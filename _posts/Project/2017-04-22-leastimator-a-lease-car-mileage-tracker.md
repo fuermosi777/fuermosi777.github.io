@@ -7,6 +7,7 @@ color: 3B3946
 bgcolor: AFAFB1
 image: leastimator-app-icon.png
 imagesize: small
+downloadlink: https://itunes.apple.com/us/app/leastimator-mileage-tracker/id1228501014?ls=1&mt=8
 tags:
 - React Native
 ---

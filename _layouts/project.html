@@ -2,7 +2,7 @@
 layout: default
 ---
 
-<div class="title-bar high"></div>
+<!--<div class="title-bar high"></div>
 <div class="grid-space high">
   <div class="col-1 grid-link" style="background-color: #{{ page.bgcolor }};">
     <img class="grid-image {{ page.imagesize }}" src="/images/{{ page.image }}" />
@@ -10,9 +10,9 @@ layout: default
   <div class="col-1 grid-link" style="background-color: #{{ page.bgcolor }}; opacity: 0.6;"></div>
   <div class="col-1 grid-link" style="background-color: #{{ page.bgcolor }}; opacity: 0.4;"></div>
   <div class="col-1 grid-link" style="background-color: #{{ page.bgcolor }}; opacity: 0.2;"></div>
-</div>
+</div>-->
 
-<div class="title-bar">
+<!--<div class="title-bar">
   <div class="col-1 large-text">{{ page.title }}</div>
   <div class="col-2 medium-text">{{ page.subtitle }}</div>
   <div class="col-1">
@@ -22,11 +22,27 @@ layout: default
       <a class="button" href="{{ page.github }}"style="background-color: #{{ page.color }};">View on Github</a>
     {% endif %}
   </div>
+</div>-->
+
+<div class="project-title-bar" style="background-color: #{{ page.color }};">
+  <div class="image-box">
+    <img src="/images/{{ page.image }}" />
+  </div>
+  <div class="title-box">
+    <div class="title">{{ page.title }}</div>
+    <div class="subtitle">{{ page.subtitle }}</div>
+    {% if page.website %}
+      <a class="button" href="{{ page.website }}" style="background-color: #{{ page.bgcolor }};">View website</a>
+    {% elsif page.downloadlink %}
+      <a class="button" href="{{ page.downloadlink }}" style="background-color: #{{ page.bgcolor }};">Download</a>
+    {% elsif page.github %}
+      <a class="button" href="{{ page.github }}" style="background-color: #{{ page.bgcolor }};">View on Github</a>
+    {% endif %}
+  </div>
 </div>
 
-<div class="grid-space">
-  <div class="col-1"></div>
-  <div class="col-3 page-text">
+<div class="main-content">
+  <div class="page-text">
     {{ content }}
   </div>
 </div>
