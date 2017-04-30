@@ -4,12 +4,14 @@ subtitle: A quantitative technical analysis platform
 layout: project
 category: project
 color: E47878
-bgcolor: E47878
+bgcolor: eca0a0
 image: q.png
 tags:
 - Python
 - Javascript
 ---
+
+## Introduction
 
 [Q][1] is a quantitative technical analysis platform I created. It has three main components:
 

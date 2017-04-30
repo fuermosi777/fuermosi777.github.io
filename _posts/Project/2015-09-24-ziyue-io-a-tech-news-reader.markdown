@@ -4,7 +4,7 @@ subtitle: A tech news reader
 layout: project
 category: project
 color: 21C1B1
-bgcolor: 21C1B1
+bgcolor: 4dcdc0
 image: ziyue.png
 tags:
 - Javascript

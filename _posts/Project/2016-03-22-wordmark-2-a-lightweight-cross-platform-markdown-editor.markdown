@@ -5,7 +5,7 @@ layout: project
 category: project
 slug: china-stock
 color: 5AB3EE
-bgcolor: B5E0FB
+bgcolor: 9cd1f4
 image: wordmark2.png
 imagesize: small
 website: http://wordmarkapp.com/
@@ -14,6 +14,8 @@ tags:
 - Electron
 - React
 ---
+
+## Introduction
 
 [WordMark](http://wordmarkapp.com) is not just a update of the WordMark 1.x, which was a Markdown editor only for WordPress writers. Besides some improvements to the performance and UI design, I basically re-wrote the entire app using a new framework.
 

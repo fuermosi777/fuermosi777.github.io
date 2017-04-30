@@ -5,7 +5,7 @@ layout: project
 category: project
 image: xunwei-website.png
 color: 4FC9DE
-bgcolor: 4FC9DE
+bgcolor: 83d9e7
 tags:
 - Python
 - Django
@@ -14,6 +14,8 @@ tags:
 - CentOS
 - HTML/CSS
 ---
+
+## Introduction
 
 [Xunwei (寻味)][1] is the first project of Xunwei Co., which I co-founded with my friends in New York. The primary function of the website is to solve the problem that tourists, international students and other relevant people from China can hardly get useful information from website such as Yelp or FourSquare, partly because of the different food culture and partly because of language differences. Therefore we built the website to help them to explore, to share, and to collect their favorite restaurants in the United States.
 

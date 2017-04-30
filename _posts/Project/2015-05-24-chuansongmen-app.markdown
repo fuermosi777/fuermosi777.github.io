@@ -5,7 +5,7 @@ layout: project
 category: project
 slug: chuansongmen-app
 color: 137BDC
-bgcolor: B8D7F4
+bgcolor: 71afea
 image: csm.png
 imagesize: small
 tags:

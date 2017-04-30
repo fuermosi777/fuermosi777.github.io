@@ -6,7 +6,7 @@ category: project
 image: studentdaily.png
 imagesize: small
 color: 0B5767
-bgcolor: 0B5767
+bgcolor: 6c9aa3
 tags:
 - Python
 - Linux

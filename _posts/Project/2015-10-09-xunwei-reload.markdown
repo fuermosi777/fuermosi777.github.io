@@ -4,7 +4,7 @@ subtitle: A restaurant review webapp
 layout: project
 category: project
 color: EC7F54
-bgcolor: FACDAC
+bgcolor: ef9876
 image: xunwei-2.png
 tags:
 - Javascript
