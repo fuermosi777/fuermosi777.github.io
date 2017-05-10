@@ -1,0 +1,29 @@
+---
+layout: null
+---
+
+<link rel="stylesheet" type="text/css" href="/css/jquery.fullpage.min.css">
+<style>
+  html, body {
+    margin: 0;
+  }
+  .main-content {
+    width: 800px;
+    margin: 0 auto;
+  }
+</style>
+
+<div id="fullpage">
+  <div class="section">Some section</div>
+  <div class="section">Some section</div>
+  <div class="section">Some section</div>
+  <div class="section">Some section</div>
+</div>
+
+<script src='/js/jquery-3.2.1.min.js'></script>
+<script src='/js/jquery.fullpage.min.js'></script>
+<script>
+  $(document).ready(function() {
+    $('#fullpage').fullpage();
+  });
+</script>
