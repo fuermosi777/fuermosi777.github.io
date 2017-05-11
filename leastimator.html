@@ -6,15 +6,77 @@ layout: null
 <style>
   html, body {
     margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   }
-  .main-content {
-    width: 800px;
-    margin: 0 auto;
+  .section {
+    background: #35343c;
   }
+  .stuff {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+  }
+  .text {
+
+  }
+  .title {
+    color: white;
+    font-size: 30px;
+    font-weight: 200;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+  }
+  .desc {
+    color: #8D8E99;
+    font-weight: 200;
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+  .image {
+    max-height: 80%;
+  }
+  .buttons {
+    display: flex;
+  }
+  .store-button {
+    display: block;
+    width: 140px;
+    border: 1px solid white;
+    margin-right: 10px;
+    border-radius: 8px;
+    padding: 5px;
+    transition: all 0.2s;
+  }
+  .store-button:hover {
+    border-color: #63B2E5;
+    background-color: #63B2E5;
+  }
+  .button-image {
+    width: 100%;
+  }
+
 </style>
 
 <div id="fullpage">
-  <div class="section">Some section</div>
+  <div class="section">
+    <div class="stuff">
+      <div class="text">
+        <div class="title">Introducing<br>Leastimator</div>
+        <div class="desc">A simple app to keep you ON TRACK.</div>
+        <div class="buttons">
+          <a class="store-button" href="https://itunes.apple.com/US/app/id1228501014?mt=8">
+            <img class="button-image" src="/images/leastimator/app-store.png"/>
+          </a>
+          <a class="store-button" href="https://play.google.com/store/apps/details?id=com.leastimator">
+            <img class="button-image" src="/images/leastimator/google-play.png"/>
+          </a>
+        </div>
+      </div>
+      <img class="image" src="/images/leastimator/leastimator-demo-phone-1.png">
+    </div>
+  </div>
   <div class="section">Some section</div>
   <div class="section">Some section</div>
   <div class="section">Some section</div>
