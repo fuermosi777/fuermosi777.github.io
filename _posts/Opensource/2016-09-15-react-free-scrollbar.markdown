@@ -4,7 +4,7 @@ subtitle: A react module for creating customizable scrollbar
 layout: project
 category: opensource
 slug: react-free-scrollbar
-bgcolor: DAF3C2
+bgcolor: a0c67b
 image: react-free-scrollbar.png
 imagesize: small
 tags:
@@ -12,6 +12,8 @@ tags:
 - React
 - npm
 ---
+
+## Introduction
 
 [React-free-scrollbar](http://liuhao.im/react-free-scrollbar/) is a react module for creating customizable scroll area.
 

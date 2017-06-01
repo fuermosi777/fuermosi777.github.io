@@ -9,6 +9,8 @@ tags:
 - Python
 ---
 
+## Introduction
+
 [china-stock][1] is a Python module which can retrieves stock data from Chinese Shenzhen and Shanghai Stock exchanges.
 
 __Install__
