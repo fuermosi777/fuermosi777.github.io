@@ -4,6 +4,9 @@ layout: null
 
 <link rel="stylesheet" type="text/css" href="/css/jquery.fullpage.min.css">
 <style>
+  * {
+    box-sizing: border-box;
+  }
   html, body {
     margin: 0;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
@@ -19,7 +22,7 @@ layout: null
     height: 100%;
   }
   .text {
-
+    width: 300px;
   }
   .title {
     color: white;
@@ -33,9 +36,25 @@ layout: null
     font-weight: 200;
     font-size: 18px;
     margin-bottom: 20px;
+    line-height: 1.5;
+  }
+  .copy {
+    margin-top: 100px;
+    color: white;
+  }
+  .copy a {
+    color: #8D8E99;
+    font-size: 14px;
+    font-weight: 200;
+    text-decoration: none;
+  }
+  .copy a:hover {
+    color: white;
   }
   .image {
-    max-height: 80%;
+    max-height: 75%;
+    max-width: 40%;
+    margin: 0 40px;
   }
   .buttons {
     display: flex;
@@ -56,6 +75,40 @@ layout: null
   .button-image {
     width: 100%;
   }
+  #fp-nav ul li a span, .fp-slidesNav ul li a span {
+    background-color: white;
+  }
+
+  @media (max-width: 700px) {
+    .stuff {
+      position: relative;
+    }
+    .text {
+      position: absolute;
+      left: 0;
+      width: 100%;
+      bottom: 0;
+      background: rgba(0,0,0,0.5);
+      padding: 15px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .image {
+      height: 100%;
+      max-height: initial;
+      max-width: initial;
+    }
+    .title {
+      font-size: 20px;
+    }
+    .desc {
+      font-size: 14px;
+    }
+    .copy {
+      font-size: 12px;
+    }
+  }
 
 </style>
 
@@ -64,7 +117,7 @@ layout: null
     <div class="stuff">
       <div class="text">
         <div class="title">Introducing<br>Leastimator</div>
-        <div class="desc">A simple app to keep you ON TRACK.</div>
+        <div class="desc">A simple app to keep you ON TRACK for your leased car</div>
         <div class="buttons">
           <a class="store-button" href="https://itunes.apple.com/US/app/id1228501014?mt=8">
             <img class="button-image" src="/images/leastimator/app-store.png"/>
@@ -73,15 +126,17 @@ layout: null
             <img class="button-image" src="/images/leastimator/google-play.png"/>
           </a>
         </div>
+        <div class="copy"><a href="/">&copy; Hao Liu 2017</a> | <a href="mailto:liuhao1990@gmail.com">Get in touch</a></div>
       </div>
       <img class="image" src="/images/leastimator/leastimator-demo-phone-1.png">
     </div>
   </div>
   <div class="section">
-    <div class="text">
+    <div class="stuff">
       <img class="image" src="/images/leastimator/leastimator-demo-phone-2.png">
-      <div class="title">Introducing<br>Leastimator</div>
-        <div class="desc">A simple app to keep you ON TRACK.</div>
+      <div class="text">
+        <div class="title">Predicted Mileage</div>
+        <div class="desc">A circle progress graph that helps you easily see how many miles you are going to reach when the lease ends as well as some other useful information</div>
         <div class="buttons">
           <a class="store-button" href="https://itunes.apple.com/US/app/id1228501014?mt=8">
             <img class="button-image" src="/images/leastimator/app-store.png"/>
@@ -90,13 +145,15 @@ layout: null
             <img class="button-image" src="/images/leastimator/google-play.png"/>
           </a>
         </div>
+        <div class="copy"><a href="/">&copy; Hao Liu 2017</a> | <a href="mailto:liuhao1990@gmail.com">Get in touch</a></div>
       </div>
     </div>
   </div>
   <div class="section">
-    <div class="text">
-      <div class="title">Introducing<br>Leastimator</div>
-        <div class="desc">A simple app to keep you ON TRACK.</div>
+    <div class="stuff">
+      <div class="text">
+        <div class="title">A Line Chart</div>
+        <div class="desc">In the line chart view, you can track the mileage consumption and decide your next move</div>
         <div class="buttons">
           <a class="store-button" href="https://itunes.apple.com/US/app/id1228501014?mt=8">
             <img class="button-image" src="/images/leastimator/app-store.png"/>
@@ -105,15 +162,17 @@ layout: null
             <img class="button-image" src="/images/leastimator/google-play.png"/>
           </a>
         </div>
+        <div class="copy"><a href="/">&copy; Hao Liu 2017</a> | <a href="mailto:liuhao1990@gmail.com">Get in touch</a></div>
       </div>
       <img class="image" src="/images/leastimator/leastimator-demo-phone-3.png">
     </div>
   </div>
   <div class="section">
-    <div class="text">
+    <div class="stuff">
       <img class="image" src="/images/leastimator/leastimator-demo-phone-4.png">
-      <div class="title">Introducing<br>Leastimator</div>
-        <div class="desc">A simple app to keep you ON TRACK.</div>
+      <div class="text">
+        <div class="title">Oops!</div>
+        <div class="desc">Driving too much recently? No worries!<br><br>Leastimator will calculate the predictted mileage based on your historical odometer readings, and you can adjust how you drive in the future</div>
         <div class="buttons">
           <a class="store-button" href="https://itunes.apple.com/US/app/id1228501014?mt=8">
             <img class="button-image" src="/images/leastimator/app-store.png"/>
@@ -122,6 +181,7 @@ layout: null
             <img class="button-image" src="/images/leastimator/google-play.png"/>
           </a>
         </div>
+        <div class="copy"><a href="/">&copy; Hao Liu 2017</a> | <a href="mailto:liuhao1990@gmail.com">Get in touch</a></div>
       </div>
     </div>
   </div>
@@ -131,6 +191,9 @@ layout: null
 <script src='/js/jquery.fullpage.min.js'></script>
 <script>
   $(document).ready(function() {
-    $('#fullpage').fullpage();
+    $('#fullpage').fullpage({
+      navigation: true,
+      navigationPosition: 'right'
+    });
   });
 </script>
