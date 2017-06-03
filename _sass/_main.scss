@@ -50,12 +50,23 @@ a {
   font-size: 14px;
 }
 
+.dimed-text {
+  opacity: 0.6;
+}
+
 .page-text {
   color: rgba(81,81,81,0.8);
   font-size: 14px;
 
   p {
+    margin-bottom: 20px;
+  }
+
+  li {
     margin-bottom: 10px;
+    p {
+      margin-bottom: 10px;
+    }
   }
 
   h2 {
@@ -79,19 +90,15 @@ a {
   }
 
   blockquote {
-    background-color: #EBEEF9;
-    margin: 30px 0 0;
-    padding: 15px;
+    background-color: #f4f6fd;
+    margin: 20px 0;
+    padding: 15px 15px 1px;
     border-radius: 4px;
-
-    p {
-      padding: 0;
-    }
   }
 
   pre {
     padding: 15px 20px;
-    background: #EBEEF9;
+    background: #f4f6fd;
     border-radius: 3px;
     overflow: auto;
     margin: 15px 0 20px;
@@ -102,7 +109,7 @@ a {
     border-radius: 2px;
     margin: 0 1px;
     padding: 2px 4px;
-    background: #EBEEF9;
+    background: #f4f6fd;
   }
 
   h1 > code,
@@ -291,7 +298,7 @@ a {
       padding: 2px 4px;
       margin: 0 2px 4px 0;
       border-radius: 2px;
-      background-color: #EBEEF9;
+      background-color: #f4f6fd;
     }
   }
 }

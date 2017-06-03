@@ -12,7 +12,11 @@ tags:
 - Objective-C
 ---
 
-## Updates
+## 
+
+6/1/2017
+
+- Chuansongmen app was sold and there will be no future updates
 
 v1.2 5/12/2015
 

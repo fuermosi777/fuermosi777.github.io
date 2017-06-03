@@ -9,6 +9,8 @@ tags:
 - JavaScript
 ---
 
+## Introduction
+
 [Srt.js][1] is a simple JavaScript parser for SubRip(.srt) files. You can easily parse a .srt subtitle file in the client side or in the server side using Node.js.
 
 ![](/images/srtjs.jpg)
