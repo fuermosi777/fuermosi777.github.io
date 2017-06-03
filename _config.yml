@@ -16,7 +16,7 @@ twitter_username: dabin
 github_username:  fuermosi777
 
 # Build settings
-highlighter: pygments
+highlighter: rouge
 markdown: kramdown
 kramdown:
   input: GFM
