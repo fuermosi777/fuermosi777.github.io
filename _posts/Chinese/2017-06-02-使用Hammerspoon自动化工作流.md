@@ -6,22 +6,22 @@ tags:
 - util
 ---
 
-![](/images/hammerspoon.png)
+![](/images/hammerspoon-bg.png)
 
 * TOC
 {:toc}
 
 ## 引言
 
-作为程序员，我一直致力于避免来回从鼠标/触摸板和键盘之间切换。因为程序员花大量的时间在黑漆漆的屏幕上，而鼠标相比键盘来说效率要逊色太多。最近我发现了一个叫做[Hammerspoon](http://www.hammerspoon.org/)的强大工具。下面我会分享一些我自己的使用技巧和心得。有些技巧非常有用，能够极大提升效率，进而缓解因非编程行为引起的焦虑感，从而提升程序员的幸福指数。
+作为程序员，我一直致力于避免来回从鼠标/触摸板和键盘之间切换。因为程序员花大量的时间在黑漆漆的屏幕上，而鼠标相比键盘来说效率要逊色太多，这一点随着屏幕尺寸的增大越发明显。最近我发现了一个叫做[Hammerspoon](http://www.hammerspoon.org/)的强大工具。下面我会分享一些我自己的使用技巧和心得。有些技巧非常有用，能够极大提升电脑的日常使用效率，进而缓解因非编程行为引起的焦虑感，最后提升程序员的幸福指数。
 
-Hammerspoon的配置文件用Lua语言编写。尽管Lua提供了不错的模块系统。但我倾向于避免使用它。因为我一般习惯于把这些配置文件放在Github上，每次需要更新的时候，一个简单的复制粘贴就可以轻松搞定，而不需要用命令行再去`git pull`。另外我认为Hammerspoon这种工具的初衷是以最简洁的方式来帮助程序员解决一些日常操作的问题。
+Hammerspoon的配置文件用Lua语言编写。尽管Lua提供了不错的模块系统。但我倾向于避免使用它。因为我一般习惯于把这些配置文件放在Github上，每次需要更新的时候，一个简单的复制粘贴就可以轻松搞定，而不需要用命令行再去`git pull`。另外我认为Hammerspoon这种工具的初衷是以最简洁的方式来帮助程序员解决一些日常操作的问题，因此创造太多的文件无异于自找麻烦。
 
 ## 我的一些配置：`~/.hammerspoon/init.lua`
 
 ### 1. 使用<kbd>alt</kbd> + <kbd>字母</kbd>组合键快速启动应用
 
-这是我最常用的功能。从Windows时代开始我就一直尽量把常用的应用放在快捷键中，而不是用鼠标去点击那些图标。一旦熟悉了这种操作方式，生命会延长很多时间。使用Mac系统后，我先后使用了Bettertools和Alfred的PowerPack来完成这项功能，而自从有了Hammerspoon，这些软件通通都不需要了。
+这是我最常用的功能。从Windows时代开始我就一直尽量把常用的应用放在快捷键中，而不是用鼠标去点击那些图标。一旦熟悉了这种操作方式，生命会延长很多时间。使用Mac系统后，我先后使用了Bettertools和Alfred的PowerPack来完成这项功能，而Betterment格外引入了一些我完全不需要的功能，而PowerPack价格昂贵。自从有了Hammerspoon，这些软件通通都不需要了。
 
 这是我用Hammerspoon的解决方案:
 
@@ -52,9 +52,9 @@ hs.hotkey.bind({"alt"}, "M", open("NeteaseMusic"))
 
 ### 2. 使用<kbd>alt</kbd> + <kbd>字母</kbd>快速打开某个Chrome标签页
 
-有一些应用是运行在网页中的单页应用，比如Slack，HipChat，甚至Gmail。传统方式打开这些页面，非得先打开Chrome窗口，然后在上面的标签栏找到想找的页面。非常费事费力。因此我使用Hammerspoon来达到跟上一个功能类似的快捷键。
+有一些应用是运行在网页中的单页应用，比如Slack，HipChat，甚至Gmail。传统方式打开这些页面，非得先打开Chrome窗口，然后在上面的标签栏找到想找的页面。非常费事费力。因此我使用Hammerspoon来完成跟上一个功能类似的快捷键。
 
-这里我们需要用到[JXA](https://github.com/dtinth/JXA-Cookbook)，即使用以下为javascript代码提供的API来完成一些自动化工作流，这是Mac系统自Yosemite以来新添加的功能，另外一个选择是AppleScript，但是这个实在太麻烦了。
+这里我们需要用到[JXA](https://github.com/dtinth/JXA-Cookbook)，即使用javascript代码提供的API来完成一些自动化工作流，这是Mac系统自Yosemite以来新添加的功能，另外一个选择是AppleScript，但是这个语法复杂，实在太麻烦了。Hammerspoon可以直接运行javascript的代码：
 
 ```lua
 function chrome_active_tab_with_name(name)
@@ -90,7 +90,7 @@ end
 hs.hotkey.bind({"alt"}, "H", chrome_active_tab_with_name("HipChat"))
 ```
 
-这样，直接按住<kbd>alt</kbd>和<kbd>h</kbd>快捷键，我就可以直接打开HipChat的web应用了。
+这样，直接按住<kbd>alt</kbd>和<kbd>h</kbd>快捷键，我就可以直接打开HipChat的web应用了。开发JXA有个技巧，可以直接在Mac提供的Script Editor中开发，API文档可以通过菜单栏中的Library中找到。如果没有某些应用的话，需要点击Library上方的加号添加。
 
 ### 3. 快速修改窗口为屏幕尺寸的30%, 50%或者70%
 
