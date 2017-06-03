@@ -52,7 +52,7 @@ a {
 
 .page-text {
   color: rgba(81,81,81,0.8);
-  font-size: 13px;
+  font-size: 14px;
 
   p {
     margin-bottom: 10px;
@@ -98,12 +98,24 @@ a {
   }
 
   code {
-    font-family: 'Source Code Pro', monospace;
+    font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
     border-radius: 2px;
-    color: #70768a;
     margin: 0 1px;
     padding: 2px 4px;
     background: #EBEEF9;
+  }
+
+  h1 > code,
+  h2 > code,
+  h3 > code,
+  h4 > code,
+  h5 > code,
+  h6 > code,
+  p > code,
+  a > code,
+  ul > code,
+  li > code {
+    color: #a626a4;
   }
 
   pre code {
@@ -116,6 +128,19 @@ a {
     text-align: center;
     max-width: 100%;
     margin-left: 0;
+  }
+
+  kbd {
+    padding: 3px 5px;
+    font: 12px "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+    line-height: 10px;
+    color: #70768a;
+    vertical-align: middle;
+    background-color: #fafbfc;
+    border: solid 1px #EBEEF9;
+    border-bottom-color: #d3d6e0;
+    border-radius: 3px;
+    box-shadow: inset 0 -1px 0 #d3d6e0;
   }
 }
 
@@ -291,10 +316,14 @@ a.button {
   border: 1px solid #E5E5E5;
   border-radius: 3px;
   padding: 10px;
-  padding-left: 30px;
+  padding-left: 15px;
   margin-bottom: 20px;
 
   ul {
     padding-left: 15px;
+  }
+
+  ul, li {
+    list-style-type: none;
   }
 }

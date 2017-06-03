@@ -16,7 +16,12 @@ twitter_username: dabin
 github_username:  fuermosi777
 
 # Build settings
+highlighter: pygments
 markdown: kramdown
+kramdown:
+  input: GFM
+  auto_ids: true
+  auto_id_prefix: 'id-'
 
 gems:
   - jekyll-sitemap
