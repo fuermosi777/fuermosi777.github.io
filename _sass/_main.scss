@@ -148,6 +148,22 @@ a {
     border-radius: 3px;
     box-shadow: inset 0 -1px 0 #d3d6e0;
   }
+
+  table {
+    border-collapse: collapse;
+    margin-bottom: 20px;
+
+    tr:not(:last-child) {
+      border-bottom: 1px solid rgba(0,0,0,0.1);
+    }
+
+    td {
+      padding: 2px 8px;
+    }
+    td:not(:last-child) {
+      border-right: 1px solid rgba(0,0,0,0.1);
+    }
+  }
 }
 
 .page-title {

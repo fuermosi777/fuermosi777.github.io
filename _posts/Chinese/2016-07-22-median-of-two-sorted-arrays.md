@@ -3,7 +3,7 @@ title: 两个有序数组找中位数的Javascript解法
 layout: post
 category: Chinese
 tags:
-- Algorithm
+- Algo
 ---
 
 > There are two sorted arrays nums1 and nums2 of size m and n respectively.

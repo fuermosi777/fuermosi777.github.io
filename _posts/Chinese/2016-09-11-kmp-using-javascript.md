@@ -3,7 +3,7 @@ title: 使用Javascript的KMP算法
 layout: post
 category: Chinese
 tags:
-- Algorithm
+- Algo
 - KMP
 ---
 
