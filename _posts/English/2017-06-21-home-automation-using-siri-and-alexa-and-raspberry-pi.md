@@ -39,6 +39,9 @@ That's why I started my smart home project which based on the following high-lev
 - Echo Dot (2nd Gen)
 - MagicW 38KHz IR transmitter and receiver
 - Futaba S3003 Servo
+- 2N3904 Transistor
+- Breadboards (400 pin)
+- ESP8266 NodeMCU modules
 
 ## Setup Raspberry PI
 
@@ -53,119 +56,152 @@ That's why I started my smart home project which based on the following high-lev
   - `$ curl -sLS https://apt.adafruit.com/add | sudo bash`
   - `$ sudo apt-get install node`
 8. Install Vim: `$ sudo apt-get vim`
+9. Install Python 3.6.1 (optional):
+  - `$ sudo apt-get update`
+  - `$ sudo apt-get install build-essential tk-dev libncurses5-dev libncursesw5-dev libreadline6-dev libdb5.3-dev libgdbm-dev libsqlite3-dev libssl-dev libbz2-dev libexpat1-dev liblzma-dev zlib1g-dev`
+  - $ wget https://www.python.org/ftp/python/3.6.1/Python-3.6.1.tar.xz
+  - $ tar xf Python-3.6.1.tar.xz
+  - $ cd Python-3.6.1
+  - $ ./configure --enable-optimizations
+  - $ make
+  - $ sudo make altinstall
+
+## Setup Homebridge - Siri
+
+Install [Homebridge](https://github.com/nfarina/homebridge):
+
+```
+$ sudo npm install -g --unsafe-perm homebridge
+```
+
+Install [homebridge-cmdswitch2](https://github.com/luisiam/homebridge-cmdswitch2) so that you can connect Homebridge to anything.
+
+Setup run at boot following official guide.
+
+Open iPhone and "Add accessory", select Homebridge.
+
+## Setup Alexa Echo Dot
+
+Instead of using Skills, I use [Fauxmo](https://github.com/dsandor/fauxmojs), which is a piece of code pretending itself to be a WeMo device. So that I can just say "Alexa, do something" instead of "Alexa, tell x to do something".
+
+Just `mkdir` in a workspace, and initiate the directory to a npm directory.
+
+```javascript
+$ npm install fauxmojs --save
+```
+
+Using [sample code](https://github.com/fuermosi777/home-automation/blob/master/fauxmo/index.js) to create a configuration file.
 
 ## Lights
 
 The idea of controlling lights is using cheap RF remote outlets and RF transmitter. Plugging a RF outlet into wall, hacking the remote on/off RF code, then using Siri or Alexa to control.
 
-First connect the RF transmitter and receiver to Raspberry PI.
+First connect the RF transmitter and receiver to Raspberry PI. Basically they are both VCC to 3.3V, Ground to GND, and data to GPIO pin.
+
+Install [wiringPi](https://projects.drogon.net/raspberry-pi/wiringpi/download-and-install/).
+
+Using [rf_pi](https://github.com/n8henrie/rf_pi). Download it to Raspberry PI.
+
+```sh
+$ git clone https://github.com/n8henrie/rf_pi.git
+$ cd rf_pi
+
+# Edit files with your pin values, etc.
+vim RFSniffer.cpp # edit to change your pin number if needed
+vim send.cpp # edit to change your pin number / pulse length if needed
+
+# Will ask for sudo privileges for the `setcap` step and will give an (ignored)
+# error if you didn't install libcap2-bin:
+$ make
+```
+
+Start recording:
+
+```
+$ ./RFSniffer
+```
+
+Click buttons in remote and save the code somewhere for later use.
+
+Test sending:
+
+```
+$ ./send 123456
+```
+
+### Integration
+
+For Siri, add the following commands to `config.json`:
+
+```json
+{
+  "on_cmd": "/home/pi/workspace/rf_pi/send 5272835",
+  "off_cmd": "/home/pi/workspace/rf_pi/send 5272836"
+}
+```
+
+For Alexa, add the following:
+
+```javascript
+const { spawnSync } from 'child_process';
+// ...
+if (action === 'on') {
+  spawnSync('/home/pi/workspace/rf_pi/send', ['5272835'], { encoding: 'utf8'});
+} else if (action === 'off') {
+  spawnSync('/home/pi/workspace/rf_pi/send', ['5272844'], { encoding: 'utf8'});
+}
+```
 
 ## A/C
 
-A/C remote is using Infrared Remote signal. Need to do similar to lights.
+A/C remote is using Infrared Remote signal. Need to do similar to lights. Unlike RF, IR transmitting requires directional action range, meaning that you have to point the IR Led bulb to the device. In such case, however, the position of the Raspberry PI is limited.
 
-First connect IR transmitter and receiver to Raspberry PI. The receiver connects to GPIO 23 pin and transmitter connects to 22.
+So I discovered a small and cheap WiFi Enabled module called ESP8266. The idea is deploying several ESP8266 in the room for different devices. Connecting IR emitter to them. Sending commands from Raspberry PI using HTTP requests.
 
-### Setting up LIRC
+### Setup Arduino IDE
 
-Install LIRC:
+In this part, Raspberry PI is not needed. Just need a computer. For MacOS Sierra users, need to [download a CH340 driver](https://github.com/adrianmihalko/ch340g-ch34g-ch34x-mac-os-x-driver). Install the driver, and restart the computer.
 
-```sh
-$ sudo apt-get install lirc
+Download [Arduino IDE](https://www.arduino.cc/en/Main/Software) and install. In "Manager Libraries", enter "Esp8266" and install the NodeMCU library. Using a data cable (micro USB to USB) connecting ESP chip and the Macbook. In the menu, selecting "Tools" and "Boards", selecting "NodeMCU 1.0". In "Port", selecting the second item (not Bluetooth port).
+
+Open a example code in the menu, and run "Upload" to test that everything works.
+
+### IR Recording
+
+Put the NodeMCU module into the breadboard. Connecting IR Receiver VCC to 3.3V, GND to GND, Data to D5, which is GPIO 14 pin. You should always have a [NodeMCU pin map](http://crufti.com/content/images/2015/11/nodemcudevkit_v1-0_io.jpg) as guidance.
+
+Using [IRremoteESP8266](https://github.com/markszabo/IRremoteESP8266) package, download and move the unzipped folder to `<path>/Arduino/Libraries`. Restart the IDE. There will be something more in the examples. Open `IRrecvDumpV2.ino` example. Click top right corner open Serial Monitor. Switch to channel 115200 (or whatever in the code, with something like `Serial.begin(115200)`). Upload the code.
+
+Pointing A/C remote to the receiver and click power button. Something will show up in the Serial Monitor. There are multiple cases. In my case, it shows "UNKNOWN", and prints some raw data. It is an unsigned int. 
+
+```c
+uint16_t acPowerRawData[37] = {8500,4300, 550,1600, 550,1600, 550,1600, 500,600, 550,1600, 550,600, 550,1600, 550,1600, 500,4300, 550,1600, 500,1650, 550,550, 550,1600, 550,550, 550,550, 550,550, 550,550, 600};
 ```
 
-Add following text to `/etc/modules` file:
+Save it somewhere for later use. If it is "NEC", just save the one int code.
 
-```md
-lirc_dev
-lirc_rpi gpio_in_pin=23 gpio_out_pin=22
+### IR Sending
+
+Connecting LED and transistor described [here](https://github.com/markszabo/IRremoteESP8266/wiki). To make the board simple, you don't have to follow it exactly. A better option is to use the left bottom corner pins (3.3V, Ground, and D8). So that no need for jumper wires.
+
+Open a new Arduino editor, using the [sample code](https://github.com/fuermosi777/home-automation/blob/master/esp8266/WebServerIRSend_AC.ino). The `setup()` basically connects to the WiFi, runs a simple HTTP server, and listen to a path called "/ac_power".
+
+To send the raw data of A/C power:
+
+```c
+irsend.sendRaw(acPowerRawData, 37, 38);
 ```
 
-Update the `/etc/lirc/hardware.conf` file:
+The second parameter is the length, the third one is the HZ. It is usually 38KHz for most home devices.
 
+### Integration
+
+For Siri, change the command of A/C on and off to `$ wget http://ac.local/ac_power`.
+
+For Alexa, change the function to:
+
+```javascript
+const request = require('request');
+// ...
+request.get('http://ac.local/ac_power');
 ```
-# /etc/lirc/hardware.conf
-#
-# Arguments which will be used when launching lircd
-LIRCD_ARGS="--uinput"
-
-# Don't start lircmd even if there seems to be a good config file
-# START_LIRCMD=false
-
-# Don't start irexec, even if a good config file seems to exist.
-# START_IREXEC=false
-
-# Try to load appropriate kernel modules
-LOAD_MODULES=true
-
-# Run "lircd --driver=help" for a list of supported drivers.
-DRIVER="default"
-# usually /dev/lirc0 is the correct setting for systems using udev
-DEVICE="/dev/lirc0"
-MODULES="lirc_rpi"
-
-# Default configuration files for your hardware if any
-LIRCD_CONF=""
-LIRCMD_CONF=""
-```
-
-Start `lircd`:
-
-```
-$ sudo /etc/init.d/lirc stop
-$ sudo /etc/init.d/lirc start
-```
-
-Edit `/boot/config.txt`:
-
-```
-dtoverlay=lirc-rpi,gpio_in_pin=23,gpio_out_pin=22
-```
-
-Reboot:
-
-```
-$ sudo reboot
-```
-
-### Testing IR receiver
-
-List all keys:
-
-```
-$ irrecord --list-namespace
-```
-
-Recording IR signals:
-
-```
-# Stop lirc to free up /dev/lirc0
-sudo /etc/init.d/lirc stop
-
-# Create a new remote control configuration file (using /dev/lirc0) and save the output to ~/lircd.conf
-irrecord -d /dev/lirc0 ~/lircd.conf
-
-# Make a backup of the original lircd.conf file
-sudo mv /etc/lirc/lircd.conf /etc/lirc/lircd_original.conf
-
-# Copy over your new configuration file
-sudo cp ~/lircd.conf /etc/lirc/lircd.conf
-
-# Start up lirc again
-sudo /etc/init.d/lirc start
-```
-
-Can change the name of the device file from `/home/xxx` to `AC`
-
-### Sending IR signal
-
-```
-# List all of the commands that LIRC knows for 'yamaha'
-irsend LIST AC ""
-
-# Send the KEY_POWER command once
-irsend SEND_ONCE AC KEY_POWER
-```
-
-## to be continued...
-
