@@ -39,6 +39,7 @@ That's why I started my smart home project which based on the following high-lev
 - Echo Dot (2nd Gen)
 - MagicW 38KHz IR transmitter and receiver
 - Futaba S3003 Servo
+- Lego bricks
 
 ## Setup Raspberry PI
 
@@ -167,5 +168,17 @@ irsend LIST AC ""
 irsend SEND_ONCE AC KEY_POWER
 ```
 
-## to be continued...
+## Door Lock
+
+I always have a challenge when I tried to open the door after returning from work and gym, holding a duffle bag and some food. It's quite difficult to grab the key and insert it into the key hold accurately. I want to use voice control to open the lock and allow me to enter my apartment without keys. However, door key has a security issue. Thus I don't hope people can enter my apartment by asking "Alexa, open the door" freely. 
+
+There are some products in the market that allows user to control their door locks with phone. But 1) they are really expensive, 2) user has to use their apps, and 3) the installation is complicated.
+
+The solution is to create a robotic handle using Lego bricks and a standard 5V servo. The servo is controller by another ESP8266 module, which starts a simple HTTP server and waiting for requests from the Raspberry Pi. THe ESP8266, however, only outputs 3.3V. Even though the servo still works, but the power is low. I might need to connect it to an external power source, or move the Raspberry Pi to somewhere near the door.
+
+[![Demo](https://img.youtube.com/vi/bOR6lyKNKSU/0.jpg)](https://www.youtube.com/watch?v=bOR6lyKNKSU)
+
+At last, I started two endpoints `http://lock.local/door_lock` and `http://lock.local/door_unlock`. Setting up Homebridge to send a `curl` command when I say "Siri, open the door".
+
+## To be continued...
 
