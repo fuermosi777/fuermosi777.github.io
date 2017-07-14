@@ -39,13 +39,10 @@ That's why I started my smart home project which based on the following high-lev
 - Echo Dot (2nd Gen)
 - MagicW 38KHz IR transmitter and receiver
 - Futaba S3003 Servo
-<<<<<<< HEAD
-- Lego bricks
-=======
 - 2N3904 Transistor
 - Breadboards (400 pin)
 - ESP8266 NodeMCU modules
->>>>>>> dc350709cd3d97d053e31bac570b61bc24513203
+- Lego bricks
 
 ## Setup Raspberry PI
 
