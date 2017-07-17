@@ -1,5 +1,5 @@
 ---
-title: OS X automation and shortcuts with Hammerspoon
+title: MacOS automation and shortcuts with Hammerspoon
 layout: post
 category: English
 tags:
@@ -17,7 +17,7 @@ First of all, even though Lua has a very simple module manage system. I intend n
 
 ## My recipes of `~/.hammerspoon/init.lua`
 
-### 1. Open application with <kbd>alt</kbd> + <kbd>?</kbd>
+### Open application with <kbd>alt</kbd> + <kbd>?</kbd>
 
 This is one of my favorite feature. Opening an application by holding two keys in the keyboard, is something I've used for year since I used Windows. Before I discovered Hammerspoon, I have tried Bettertools and Alfred (with PowerPack) to do that. But Bettertools involves a lot of unused feaetures, and PowerPack is expensive.
 
@@ -48,7 +48,7 @@ hs.hotkey.bind({"alt"}, "M", open("NeteaseMusic"))
 
 So that I can just tap <kbd>alt</kbd> and <kbd>c</kbd> to open Chrome.
 
-### 2. Open a certain Chrome tab with <kbd>alt</kbd> + <kbd>?</kbd>
+### Open a certain Chrome tab with <kbd>alt</kbd> + <kbd>?</kbd>
 
 For some apps such as Slack and HipChat, I want to run it as a web app in the browser, and I also want to quick switch to it. It's a little tricky because Hammerspoon doesn't have API for third party applications such as Chrome. So we need [JXA](https://github.com/dtinth/JXA-Cookbook) to help with this. JXA is that using Javascript to complete some automation in OS X. Here is my solution:
 
@@ -86,7 +86,7 @@ end
 hs.hotkey.bind({"alt"}, "H", chrome_active_tab_with_name("HipChat"))
 ```
 
-### 3. Move windows to 30%, 50% and 70% of the left/right of the screen
+### Move windows to 30%, 50% and 70% of the left/right of the screen
 
 I used Spectacle to achieve this until I discovered Hammerspoon. Why do I need one more application when I can use Hammerspoon to achieve it?
 
@@ -131,7 +131,7 @@ hs.hotkey.bind({"ctrl", "cmd"}, "Right", move('right'))
 hs.hotkey.bind({"ctrl", "cmd"}, "Left", move('left'))
 ```
 
-### 4. Quick switch Chrome users, or open incognito mode
+### Quick switch Chrome users, or open incognito mode
 
 Another killer feature. If you have multiple users of Chrome, it could be hard for you to find the correct window. Here is a solution:
 
@@ -159,14 +159,14 @@ hs.hotkey.bind({"alt"}, "2", chrome_switch_to("Yahoo!"))
 hs.hotkey.bind({"alt"}, "`", chrome_switch_to("Incognito"))
 ```
 
-### 5. Quick put computer to sleep mode
+### Quick put computer to sleep mode
 
 ```lua
 --- sleep
 hs.hotkey.bind({"control", "alt", "command"}, "DELETE", sleep)
 ```
 
-### 6. When connected to work Wifi, mute the computer to avoid awkward moment
+### When connected to work Wifi, mute the computer to avoid awkward moment
 
 Sometimes when I accidentally click a Youtube video at office, the loud music will make everyone staring at me. To avoid such moment, I can setup a water for Wifi, so that whenever the computer connects to the work Wifi, it will mute itself if it's using default output speaker.
 
@@ -183,7 +183,7 @@ hs.wifi.watcher.new(function()
 end):start()
 ```
 
-### 7. Quick add a new reminder
+### Quick add a new reminder
 
 I spent a lot of time on this recipe. It is very useful to me as I am a heavy user of Apple's Reminder app. It is a built-in app and yet powerful. However, it doesn't provide very many options on shortcuts. With JXA, I can create a workflow so that I can add a quick reminder with remind time to any list I have.
 

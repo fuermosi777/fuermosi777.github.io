@@ -1,9 +1,9 @@
 ---
-title: Home automation with Siri, Alexa, and Raspberry PI 3
+title: Home automation with Siri, Alexa, and Raspberry Pi 3
 layout: post
 category: English
 tags:
-- rpi
+- IOT
 ---
 
 * TOC
@@ -23,17 +23,17 @@ That's why I started my smart home project which based on the following high-lev
 
 ## High-level Goals
 
-- Turn on/off all major lights in the apartment by just saying "Turn on/off the light"
-- Lock/unlock the door without using my key, or even my attention
-- Open/close blinds automatically or by sound control
-- Open/close window with sound
-- Control A/C with sound
-- Wake me up with different songs every day
-- Control TV, projector, sound bar, Apple TV, PS4 without using tons of remotes
+- [x] Turn on/off all major lights in the apartment by just saying "Turn on/off the light"
+- [x] Lock/unlock the door without using my key, or even my attention
+- [ ] Open/close blinds automatically or by sound control
+- [ ] Open/close window with sound
+- [x] Control A/C and fan with sound
+- [ ] Wake me up with different songs every day
+- [x] Control TV, projector, sound bar, Apple TV, PS4 without using tons of remotes
 
 ## Hardware
 
-- Raspberry PI 3 Model B
+- Raspberry Pi 3 Model B
 - RioRand(TM) 433MHz RF transmitter and receiver
 - Etekcity Wireless Remote Outlets
 - Echo Dot (2nd Gen)
@@ -42,9 +42,14 @@ That's why I started my smart home project which based on the following high-lev
 - 2N3904 Transistor
 - Breadboards (400 pin)
 - ESP8266 NodeMCU modules
+- Jump wires
 - Lego bricks
 
-## Setup Raspberry PI
+## Infrastructure
+
+My final plan is to build the smart IOT system with Amazon Echo Dot and Siri as control inputs, Raspberry Pi 3 as control control dispatch center, and ESP8266 NodeMCU module as control terminal. This part is just for reference as a lot of things might change with time.
+
+### Setup Raspberry Pi
 
 1. Make an order of all devices via Amazon. Received after two days.
 2. Download [Raspbian](https://www.raspberrypi.org/downloads/raspbian/). Note that no need to burn image to USB drive described in the docs. Just unzipping the file and copying and pasting everything to the USB drive.
@@ -67,7 +72,7 @@ That's why I started my smart home project which based on the following high-lev
   - $ make
   - $ sudo make altinstall
 
-## Setup Homebridge - Siri
+### Homebridge - Siri
 
 Install [Homebridge](https://github.com/nfarina/homebridge):
 
@@ -81,21 +86,59 @@ Setup run at boot following official guide.
 
 Open iPhone and "Add accessory", select Homebridge.
 
-## Setup Alexa Echo Dot
+### Amazon Echo Dot
 
 Instead of using Skills, I use [Fauxmo](https://github.com/dsandor/fauxmojs), which is a piece of code pretending itself to be a WeMo device. So that I can just say "Alexa, do something" instead of "Alexa, tell x to do something".
 
 Just `mkdir` in a workspace, and initiate the directory to a npm directory.
 
-```javascript
-$ npm install fauxmojs --save
+```sh
+$ npm install fauxmojs ip --save
 ```
 
-Using [sample code](https://github.com/fuermosi777/home-automation/blob/master/fauxmo/index.js) to create a configuration file.
+Using the following code to create a configuration file. It's very similar to the config file of Homebridge. The actual control commands are located in `handler()` functions. We will add those later.
+
+```javascript
+const FauxMo = require('fauxmojs');
+const ip = require('ip');
+const { spawnSync } = require('child_process');
+const request = require('request');
+
+let fauxMo = new FauxMo({
+  ipAddress: ip.address(),
+  devices: [{
+    name: 'Living Room Light',
+    port: 11000,
+    handler(action) {
+      if (action === 'on') {
+        // do something
+      } else if  (action === 'off') {
+        // do something else
+      }
+    }
+  }]
+});
+
+console.log('started...');
+```
+
+### ESP8266 NodeMCU module
+
+First, you need a map for this:
+
+![NodeMCU pin map](/images/iot/nodemcu_pin_map.jpg)
+
+Download Arduino IDE for Mac. Download and install [NodeMCU driver]((https://kig.re/2014/12/31/how-to-use-arduino-nano-mini-pro-with-CH340G-on-mac-osx-yosemite.html).
+
+Getting a USB-to-mini USB data sync cable, and connecting NodeMCU with Mac.
+
+Open Arduino IDE, download libraries for NodeMCU. Restart IDE. There should be two items in "port" section in the menu: `bluetooth` and something like `SLAB_USBtoUART`. Open an example file from the menu, click "upload", the blue LED will blink. Click a button at the top right corner of the IDE window to open the console, and select the correct channel number to see the logs.
 
 ## Lights
 
-The idea of controlling lights is using cheap RF remote outlets and RF transmitter. Plugging a RF outlet into wall, hacking the remote on/off RF code, then using Siri or Alexa to control.
+The idea of controlling lights is using cheap RF remote outlets and RF transmitter. You can buy a set of 5 remote outlets made by Etekcity for $30 at Amazon, while the cheapest Siri enabled outlet is at least $20.
+
+Plugging a RF outlet into wall, hacking the remote on/off RF code, then using Siri or Alexa to control. 
 
 First connect the RF transmitter and receiver to Raspberry PI. Basically they are both VCC to 3.3V, Ground to GND, and data to GPIO pin.
 
@@ -109,7 +152,7 @@ $ cd rf_pi
 
 # Edit files with your pin values, etc.
 vim RFSniffer.cpp # edit to change your pin number if needed
-vim send.cpp # edit to change your pin number / pulse length if needed
+$ vim send.cpp # edit to change your pin number / pulse length if needed
 
 # Will ask for sudo privileges for the `setcap` step and will give an (ignored)
 # error if you didn't install libcap2-bin:
@@ -185,7 +228,7 @@ Save it somewhere for later use. If it is "NEC", just save the one int code.
 
 Connecting LED and transistor described [here](https://github.com/markszabo/IRremoteESP8266/wiki). To make the board simple, you don't have to follow it exactly. A better option is to use the left bottom corner pins (3.3V, Ground, and D8). So that no need for jumper wires.
 
-Open a new Arduino editor, using the [sample code](https://github.com/fuermosi777/home-automation/blob/master/esp8266/WebServerIRSend_AC.ino). The `setup()` basically connects to the WiFi, runs a simple HTTP server, and listen to a path called "/ac_power".
+Open a new Arduino editor, using the [sample code](https://github.com/fuermosi777/home-automation/blob/master/esp8266/WebServerIRSend_AC.ino). The `setup()` basically connects to the WiFi, runs a simple HTTP server, and listen to a path called "/ac_power". Change the `rawData` to actual array you got from previous step.
 
 To send the raw data of A/C power:
 
@@ -193,13 +236,13 @@ To send the raw data of A/C power:
 irsend.sendRaw(acPowerRawData, 37, 38);
 ```
 
-The second parameter is the length, the third one is the HZ. It is usually 38KHz for most home devices.
+The second parameter is the length, the third one is the HZ. [It is usually 38 kHz for most home devices](https://en.wikipedia.org/wiki/Consumer_IR).
 
 ### Integration
 
-For Siri, change the command of A/C on and off to `$ wget http://ac.local/ac_power`.
+For Siri, change the command of A/C on and off to `curl http://ac.local/ac_power`.
 
-For Alexa, change the function to:
+For Alexa, change the handler function to:
 
 ```javascript
 const request = require('request');
@@ -218,3 +261,5 @@ The solution is to create a robotic handle using Lego bricks and a standard 5V s
 [![Demo](https://img.youtube.com/vi/bOR6lyKNKSU/0.jpg)](https://www.youtube.com/watch?v=bOR6lyKNKSU)
 
 At last, I started two endpoints `http://lock.local/door_lock` and `http://lock.local/door_unlock`. Setting up Homebridge to send a `curl` command when I say "Siri, open the door".
+
+You can find all code [here](https://github.com/fuermosi777/home-automation).

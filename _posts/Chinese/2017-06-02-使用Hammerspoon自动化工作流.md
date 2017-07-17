@@ -19,7 +19,7 @@ Hammerspoon的配置文件用Lua语言编写。尽管Lua提供了不错的模块
 
 ## 我的一些配置：`~/.hammerspoon/init.lua`
 
-### 1. 使用<kbd>alt</kbd> + <kbd>字母</kbd>组合键快速启动应用
+### 使用<kbd>alt</kbd> + <kbd>字母</kbd>组合键快速启动应用
 
 这是我最常用的功能。从Windows时代开始我就一直尽量把常用的应用放在快捷键中，而不是用鼠标去点击那些图标。一旦熟悉了这种操作方式，生命会延长很多时间。使用Mac系统后，我先后使用了Bettertools和Alfred的PowerPack来完成这项功能，而Betterment格外引入了一些我完全不需要的功能，而PowerPack价格昂贵。自从有了Hammerspoon，这些软件通通都不需要了。
 
@@ -50,7 +50,7 @@ hs.hotkey.bind({"alt"}, "M", open("NeteaseMusic"))
 
 你可以按自己的需求添加或修改快捷键。但目前我发现使用<kbd>alt</kbd>键加上字母键是一个非常好的选择。因为默认的<kbd>alt</kbd>和字母是打出一些拉丁文，这个需求很少有人用到。
 
-### 2. 使用<kbd>alt</kbd> + <kbd>字母</kbd>快速打开某个Chrome标签页
+### 使用<kbd>alt</kbd> + <kbd>字母</kbd>快速打开某个Chrome标签页
 
 有一些应用是运行在网页中的单页应用，比如Slack，HipChat，甚至Gmail。传统方式打开这些页面，非得先打开Chrome窗口，然后在上面的标签栏找到想找的页面。非常费事费力。因此我使用Hammerspoon来完成跟上一个功能类似的快捷键。
 
@@ -92,7 +92,7 @@ hs.hotkey.bind({"alt"}, "H", chrome_active_tab_with_name("HipChat"))
 
 这样，直接按住<kbd>alt</kbd>和<kbd>h</kbd>快捷键，我就可以直接打开HipChat的web应用了。开发JXA有个技巧，可以直接在Mac提供的Script Editor中开发，API文档可以通过菜单栏中的Library中找到。如果没有某些应用的话，需要点击Library上方的加号添加。
 
-### 3. 快速修改窗口为屏幕尺寸的30%, 50%或者70%
+### 快速修改窗口为屏幕尺寸的30%, 50%或者70%
 
 Spectacle提供这一功能，但是既然使用了Hammerspoon，也就没必要再额外添加另外一个应用了。以下为解决方案：
 
@@ -135,7 +135,7 @@ hs.hotkey.bind({"ctrl", "cmd"}, "Right", move('right'))
 hs.hotkey.bind({"ctrl", "cmd"}, "Left", move('left'))
 ```
 
-### 4. 快速切换Chrome用户，打开隐身模式窗口
+### 快速切换Chrome用户，打开隐身模式窗口
 
 工作人士在办公室使用电脑时常会在Chrome的工作用户和个人用户之间切换（后者用来浏览一些私人内容）。用鼠标来切换无疑是浪费生命的行为。前端程序员经常会使用隐私模式来确保网页没有缓存。尽管Chrome提供了快捷键，但是如果当前应用不是Chrome的话，是没办法使用的。以下是使用Hammerspoon来搞定的方案，基本上就是切换到Chrome应用后模拟用户点击菜单栏。
 
@@ -163,7 +163,7 @@ hs.hotkey.bind({"alt"}, "2", chrome_switch_to("Yahoo!"))
 hs.hotkey.bind({"alt"}, "`", chrome_switch_to("Incognito"))
 ```
 
-### 5. 休眠Mac
+### 休眠Mac
 
 没什么可说的。
 
@@ -172,7 +172,7 @@ hs.hotkey.bind({"alt"}, "`", chrome_switch_to("Incognito"))
 hs.hotkey.bind({"control", "alt", "command"}, "DELETE", sleep)
 ```
 
-### 6. 连接到工作网络WIFI后，自动静音电脑
+### 连接到工作网络WIFI后，自动静音电脑
 
 在办公室时有时会误点一些视频或者带有音乐的网页。如果音乐优美倒也无妨，但是如果是令人尴尬的声音则会造成负面影响。因此使用Hammerspoon来让电脑一旦连接到工作Wifi就自动静音。
 
@@ -189,7 +189,7 @@ hs.wifi.watcher.new(function()
 end):start()
 ```
 
-### 7. 快速添加提醒事项
+### 快速添加提醒事项
 
 我是Mac自带软件“提醒”的重度使用者。每次添加提醒的时候，选择时间是一个大问题。“提醒”这个软件非常简洁强大，但是并没有提供一些常用的快捷键。因此使用Hammerspoon和JXA大法了来完成自动化。
 
