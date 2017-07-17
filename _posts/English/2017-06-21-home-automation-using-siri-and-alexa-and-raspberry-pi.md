@@ -258,8 +258,84 @@ There are some products in the market that allows user to control their door loc
 
 The solution is to create a robotic handle using Lego bricks and a standard 5V servo. The servo is controller by another ESP8266 module, which starts a simple HTTP server and waiting for requests from the Raspberry Pi. THe ESP8266, however, only outputs 3.3V. Even though the servo still works, but the power is low. I might need to connect it to an external power source, or move the Raspberry Pi to somewhere near the door.
 
+Creating a new file in Aruino IDE:
+
+```c
+#include <ESP8266WiFi.h>
+#include <WiFiClient.h>
+#include <ESP8266WebServer.h>
+#include <ESP8266mDNS.h>
+#include <Servo.h> 
+
+#define DELAY_BETWEEN_COMMANDS 1000
+#define LOCK_DOOR 24
+#define UNLOCK_DOOR 134
+
+Servo myservo;
+
+const char* ssid = "";
+const char* password = "";
+const char* hname = "lock";
+int state = LOCK_DOOR;
+
+ESP8266WebServer server(80);
+
+const int led = BUILTIN_LED;
+
+void setup(void){
+  myservo.attach(4); // GPIO 4 D2
+  myservo.write(LOCK_DOOR);
+  
+  pinMode(led, OUTPUT);
+  digitalWrite(led, 1);
+  Serial.begin(115200);
+  WiFi.begin(ssid, password);
+  WiFi.hostname(hname);
+  Serial.println("");
+
+  // Wait for connection
+  while (WiFi.status() != WL_CONNECTED) {
+    delay(500);
+    Serial.print(".");
+  }
+  Serial.println("");
+  Serial.print("Connected to ");
+  Serial.println(ssid);
+  Serial.print("IP address: ");
+  Serial.println(WiFi.localIP());
+
+  if (MDNS.begin(hname)) {
+    Serial.println("MDNS Responder Started");
+  }
+
+  server.on("/door_lock", [](){
+    myservo.write(LOCK_DOOR);
+    state = LOCK_DOOR;
+    server.send(200, "text/plain", "Door locked");
+  });
+
+  server.on("/door_unlock", [](){
+    myservo.write(UNLOCK_DOOR);
+    state = UNLOCK_DOOR;
+    server.send(200, "text/plain", "Door unlocked");
+  });
+
+  server.begin();
+  Serial.println("HTTP Server Started");
+}
+
+void loop(void){
+  server.handleClient();
+}
+```
+
+`LOCK_DOOR` and `UNLOCK_DOOR` are two constants of the angles the servo should use to open and close the lock. To test if it works, visit the following two URLs in the browser:
+
+- `http://lock.local/door_lock`
+- `http://lock.local/door_unlock`
+
 [![Demo](https://img.youtube.com/vi/bOR6lyKNKSU/0.jpg)](https://www.youtube.com/watch?v=bOR6lyKNKSU)
 
-At last, I started two endpoints `http://lock.local/door_lock` and `http://lock.local/door_unlock`. Setting up Homebridge to send a `curl` command when I say "Siri, open the door".
+At last, setting up Homebridge to send a `curl` command when I say "Siri, open the door". No need for Alexa because you don't want random people to open your door by shouting outside of the apartment.
 
 You can find all code [here](https://github.com/fuermosi777/home-automation).
