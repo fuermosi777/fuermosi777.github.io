@@ -228,6 +228,8 @@ Save it somewhere for later use. If it is "NEC", just save the one int code.
 
 Connecting LED and transistor described [here](https://github.com/markszabo/IRremoteESP8266/wiki). To make the board simple, you don't have to follow it exactly. A better option is to use the left bottom corner pins (3.3V, Ground, and D8). So that no need for jumper wires.
 
+![IR sending](/images/iot/ir_sending.JPG)
+
 Open a new Arduino editor, using the [sample code](https://github.com/fuermosi777/home-automation/blob/master/esp8266/WebServerIRSend_AC.ino). The `setup()` basically connects to the WiFi, runs a simple HTTP server, and listen to a path called "/ac_power". Change the `rawData` to actual array you got from previous step.
 
 To send the raw data of A/C power:
@@ -257,6 +259,8 @@ I always have a challenge when I tried to open the door after returning from wor
 There are some products in the market that allows user to control their door locks with phone. But 1) they are really expensive, 2) user has to use their apps, and 3) the installation is complicated.
 
 The solution is to create a robotic handle using Lego bricks and a standard 5V servo. The servo is controller by another ESP8266 module, which starts a simple HTTP server and waiting for requests from the Raspberry Pi. THe ESP8266, however, only outputs 3.3V. Even though the servo still works, but the power is low. I might need to connect it to an external power source, or move the Raspberry Pi to somewhere near the door.
+
+![Lock with Lego](/images/iot/lego_lock_left.JPG)
 
 Creating a new file in Aruino IDE:
 
@@ -334,8 +338,12 @@ void loop(void){
 - `http://lock.local/door_lock`
 - `http://lock.local/door_unlock`
 
-[![Demo](https://img.youtube.com/vi/bOR6lyKNKSU/0.jpg)](https://www.youtube.com/watch?v=bOR6lyKNKSU)
+![Lock with Lego](/images/iot/lock_nodemcu.JPG)
 
 At last, setting up Homebridge to send a `curl` command when I say "Siri, open the door". No need for Alexa because you don't want random people to open your door by shouting outside of the apartment.
+
+Click to see a demo hosted on YouTube:
+
+[![Demo](https://img.youtube.com/vi/bOR6lyKNKSU/0.jpg)](https://www.youtube.com/watch?v=bOR6lyKNKSU)
 
 You can find all code [here](https://github.com/fuermosi777/home-automation).
