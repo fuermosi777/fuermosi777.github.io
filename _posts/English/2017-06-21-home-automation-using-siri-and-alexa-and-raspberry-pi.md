@@ -260,7 +260,7 @@ There are some products in the market that allows user to control their door loc
 
 The solution is to create a robotic handle using Lego bricks and a standard 5V servo. The servo is controller by another ESP8266 module, which starts a simple HTTP server and waiting for requests from the Raspberry Pi. THe ESP8266, however, only outputs 3.3V. Even though the servo still works, but the power is low. I might need to connect it to an external power source, or move the Raspberry Pi to somewhere near the door.
 
-![Lock with Lego](/images/iot/lego_lock_left.JPG)
+![Lock with Lego](/images/iot/lego_lock_left.png)
 
 Creating a new file in Aruino IDE:
 
@@ -338,7 +338,7 @@ void loop(void){
 - `http://lock.local/door_lock`
 - `http://lock.local/door_unlock`
 
-![Lock with Lego](/images/iot/lock_nodemcu.JPG)
+![Lock with Lego](/images/iot/lock_nodemcu.jpeg)
 
 At last, setting up Homebridge to send a `curl` command when I say "Siri, open the door". No need for Alexa because you don't want random people to open your door by shouting outside of the apartment.
 
