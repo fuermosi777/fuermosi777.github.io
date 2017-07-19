@@ -99,7 +99,7 @@ var cache = function(func) {
     return function() {
         var key = '';
         for (var i = 0; i < arguments.length; i++) {
-            key += typeof arguments[i] + arguments[i];
+            let key = JSON.stringify(Array.prototype.slice.apply(arguments));
         }
         if (!map.hasOwnProperty(key)) {
             map[key] = func.apply(null, arguments);
