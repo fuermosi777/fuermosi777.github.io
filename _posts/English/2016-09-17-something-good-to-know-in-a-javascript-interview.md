@@ -12,7 +12,7 @@ This post records some of the questions I met in technical interviews. Some of t
 * TOC
 {:toc}
 
-### What is functional programming in Javascript? What's its advantages?
+## What is functional programming in Javascript? What's its advantages?
 
 Functional programming is one of the programming paradigms. Here are some features:
 
@@ -24,7 +24,7 @@ Advantages:
 1. Code elegant and simple. Quick development.
 2. Easy for testing.
 
-### What is closure? 
+## What is closure? 
 
 Closure is those functions what can visit independent (free) variables. In other words: closures can memorizes the environment when they were created.
 
@@ -80,11 +80,11 @@ Negative effects on performance and memory.
 
 Reference: [MDN](https://developer.mozilla.org/cn/docs/Web/JavaScript/Closures)
 
-### How Javascript's scope chain works?
+## How Javascript's scope chain works?
 
 Read: [MDN](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide/Functions)
 
-### What is the difference between declaring properties in construction vs. in Prototype?
+## What is the difference between declaring properties in construction vs. in Prototype?
 
 ```javascript
 function A() {
@@ -110,12 +110,12 @@ console.log(a.p2); // 2
 console.log(b.p2); // 2
 ```
 
-### Declaring method in construction vs. in Prototype?
+## Declaring method in construction vs. in Prototype?
 
 Declare methods in construction takes no advantages of closure, so it should be replace by prototype.
 
     http://stackoverflow.com/questions/9772307/declaring-javascript-object-method-in-constructor-function-vs-in-prototype
 
-### React's contextProps?
+## React's contextProps?
 
 Reference: [React docs](https://facebook.github.io/react/docs/context.html)
