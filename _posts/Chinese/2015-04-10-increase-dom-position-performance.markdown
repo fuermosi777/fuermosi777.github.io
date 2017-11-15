@@ -1,5 +1,5 @@
 ---
-title: 高效率DOM和CSS动画操作 - 一周工作总结
+title: 高效率DOM和CSS动画操作
 layout: post
 category: Chinese
 tags:

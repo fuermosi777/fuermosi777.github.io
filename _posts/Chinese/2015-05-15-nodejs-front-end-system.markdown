@@ -1,5 +1,5 @@
 ---
-title: 基于Nodejs前端开发的一些想法 - 一周工作总结
+title: 基于Nodejs前端开发的一些想法
 layout: post
 category: Chinese
 tags:

@@ -1,5 +1,5 @@
 ---
-title: Path to efficient DOM and CSS animation - weekly summary
+title: Path to efficient DOM and CSS animation
 layout: post
 category: English
 tags:
