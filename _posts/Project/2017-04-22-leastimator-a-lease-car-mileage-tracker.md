@@ -4,7 +4,7 @@ subtitle: A lease car mileage tracker app
 layout: project
 category: project
 color: 3B3946
-bgcolor: 75747d
+bgcolor: c0bfc2
 image: leastimator-app-icon.png
 imagesize: small
 downloadlink: https://itunes.apple.com/us/app/leastimator-mileage-tracker/id1228501014?ls=1&mt=8

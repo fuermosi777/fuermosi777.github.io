@@ -4,7 +4,7 @@ subtitle: A react module for creating customizable scrollbar
 layout: project
 category: opensource
 slug: react-free-scrollbar
-bgcolor: a0c67b
+bgcolor: DAF3C2
 image: react-free-scrollbar.png
 imagesize: small
 tags:
@@ -15,7 +15,7 @@ tags:
 
 ## Introduction
 
-[React-free-scrollbar](http://liuhao.im/react-free-scrollbar/) is a react module for creating customizable scroll area.
+[react-free-scrollbar](http://liuhao.im/react-free-scrollbar/) is a react module for creating customizable scroll area.
 
 I built this initially for some of my side projects, which are running on a lot of different browsers that handle scrollbars differently. For example, programmers cannot change how scrollbar looks like in Firefox. In macOS, however, the scrollbar behaves differently when the user is using a mouse or a touchpad. To solve this, React-free-scrollbar is a perfect component for React developers to create their own scrollbars.
 

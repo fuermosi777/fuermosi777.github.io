@@ -4,7 +4,7 @@ subtitle: A JavaScript parser for srt
 layout: project
 category: opensource
 image: srtjs.png
-bgcolor: 4C728E
+bgcolor: 4FC9DE
 tags:
 - JavaScript
 ---

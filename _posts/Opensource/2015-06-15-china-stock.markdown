@@ -3,7 +3,7 @@ title: china-stock
 subtitle: A Python module retrieves stock data
 layout: project
 category: opensource
-bgcolor: B67BDF
+bgcolor: FACDAC
 image: china-stock.png
 tags:
 - Python

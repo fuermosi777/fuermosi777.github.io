@@ -5,7 +5,7 @@ layout: project
 category: project
 slug: china-stock
 color: 5AB3EE
-bgcolor: 9cd1f4
+bgcolor: cde7f9
 image: wordmark2.png
 imagesize: small
 website: http://wordmarkapp.com/
