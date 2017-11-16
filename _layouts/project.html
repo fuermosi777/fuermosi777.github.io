@@ -1,12 +1,21 @@
 ---
 layout: default
 ---
+{% include layout-header.html %}
 
-<div class="project-title-bar" style="background-color: #{{ page.bgcolor }};">
-  <div class="image-box">
-    <img src="/images/{{ page.image }}" />
+<div class="project-title-bar">
+  <div class="project-title-bar-bg" style="background-color: #{{ page.bgcolor }};"></div>
+  <div class="main-content">
+    <div class="col-1" style="background-color: #{{ page.bgcolor }};">
+      <div class="image-box">
+        <img src="/images/{{ page.image }}" />
+      </div>
+    </div>
+    <div class="col-1" style="background-color: #{{ page.bgcolor }};"></div>
+    <div class="col-1" style="background-color: #{{ page.bgcolor }};"></div>
+    <div class="col-1" style="background-color: #{{ page.bgcolor }};"></div>
   </div>
-  <div class="title-box">
+  <!-- <div class="title-box">
     <div class="title">{{ page.title }}</div>
     <div class="subtitle">{{ page.subtitle }}</div>
     {% if page.website %}
@@ -16,7 +25,7 @@ layout: default
     {% elsif page.github %}
       <a class="button" href="{{ page.github }}" style="background-color: #{{ page.color }};">View on Github</a>
     {% endif %}
-  </div>
+  </div> -->
 </div>
 
 <div class="main-content">
