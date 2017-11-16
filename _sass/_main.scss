@@ -1,3 +1,18 @@
+$tablet-width: 800px;
+$mobile-width: 480px;
+
+@mixin tablet {
+  @media (min-width: #{$mobile-width + 1px}) and (max-width: #{$tablet-width}) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media (max-width: #{$mobile-width}) {
+    @content;
+  }
+}
+
 a {
   color: #5c9cf5;
   &:hover {
@@ -6,27 +21,36 @@ a {
 }
 
 .main-content {
-  width: 800px;
+  max-width: 800px;
   margin: 0 auto;
-  padding: 0 20px;
-
-  @media screen and (max-width: 800px) {
-    width: 100%;
-    padding: 0 10px;
-  }
+  padding: 0 15px;
 }
+
+.f-s-mini {
+  font-size: 11px;
+}
+
 
 .col-1 {
   width: 25%;
 
-  @media screen and (max-width: 800px) {
+  @include tablet {
+    width: 33.33%;
+  }
+
+  @include mobile {
     width: 100%;
   }
+
 }
 .col-2 {
   width: 50%;
 
-  @media screen and (max-width: 800px) {
+  @include tablet {
+    width: 66.66%;
+  }
+
+  @include mobile {
     width: 100%;
   }
 }
@@ -40,18 +64,21 @@ a {
 
 .large-text {
   line-height: 1.4;
-  letter-spacing: 0.9;
   color: rgba(81,81,81,0.8);
   font-size: 22px;
+  letter-spacing: 0px;
 }
 
 .medium-text {
   color: rgba(81,81,81,0.8);
   font-size: 14px;
+  line-height: 1.4;
+  letter-spacing: 0px;
 }
 
 .dimed-text {
   opacity: 0.6;
+  letter-spacing: 0px;
 }
 
 .page-text {
@@ -196,6 +223,7 @@ a {
 }
 
 .social-link-box {
+  margin-bottom: 20px;
   a {
     color: #C0C0C0;
     font-size: 18px;
@@ -203,6 +231,36 @@ a {
     &:hover {
       color: #8FA0DC;
       text-decoration: none;
+      
+      img {
+        transform: translateY(2px);
+        transition: transform 200ms;
+      }
+    }
+    img {
+      width: 18px;
+      height: 18px;
+    }
+  }
+}
+
+.divider {
+  display: flex;
+  flex-direction: row;
+  padding: 4vw 0 0;
+  .col-1 {
+    height: 3px;
+    &:nth-child(1) {
+      background: #E5F3FD;
+    }
+    &:nth-child(2) {
+      background: #F3FBEC;
+    }
+    &:nth-child(3) {
+      background: #E9FBE7;
+    }
+    &:nth-child(4) {
+      background: #B3C9E2;
     }
   }
 }
@@ -210,13 +268,21 @@ a {
 .title-bar {
   display: flex;
   flex-wrap: wrap;
-  padding: 60px 0;
+  padding: 6vw 0 3vw;
 
-  &.high {
-    padding-top: 100px;
+  &.profile {
+    
+    .work {
+      padding-left: 5px;
+      padding-right: 5px;
 
-    @media screen and (max-width: 800px) {
-      padding: 10px 0;
+      @include tablet {
+        padding: 0;
+      }
+  
+      @include mobile {
+        padding: 0;
+      }
     }
   }
 }
@@ -257,7 +323,11 @@ a {
     align-items: center;
     position: relative;
 
-    @media screen and (max-width: 800px) {
+    @include tablet {
+      width: 33.33%;
+    }
+
+    @include mobile {
       width: 50%;
     }
 
@@ -318,13 +388,25 @@ a {
   flex-direction: column;
 
   .list-item {
-    display: flex;
     margin-bottom: 15px;
+    display: flex;
+    flex-wrap: wrap;
 
     .date {
       text-align: right;
-      padding-top: 2px;
       padding-right: 20px;
+
+      @include mobile {
+        text-align: left;
+      }
+    }
+
+    .tags {
+      @include tablet() {
+        padding-top: 2px;
+        padding-right: 20px;
+        text-align: right;
+      }
     }
 
     .tag {
