@@ -7,6 +7,9 @@ color: 3B3946
 bgcolor: c0bfc2
 image: leastimator-app-icon.png
 imagesize: small
+description: A simple app that helps you the track the mileage of your leased car.
+website: http://liuhao.im/leastimator.html
+downloadlabel: Leastimator on App Store
 downloadlink: https://itunes.apple.com/us/app/leastimator-mileage-tracker/id1228501014?ls=1&mt=8
 tags:
 - React Native
