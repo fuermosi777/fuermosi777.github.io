@@ -206,9 +206,27 @@ a {
   }
 }
 
+.project-bar {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 2vw 0 4vw;
+}
+
+.project-title {
+  font-size: 24px;
+  margin-bottom: 1vw;
+  color: rgba(81,81,81,0.9);
+}
+.project-desc {
+  padding: 0 20px 10px;
+  @include mobile {
+    padding: 10px 0;
+  }
+}
+
 .page-title {
   font-size: 24px;
-  margin-bottom: 40px;
+  margin-bottom: 3vw;
   color: rgba(81,81,81,0.9);
 }
 
@@ -475,11 +493,21 @@ a.button {
   color: white;
   border-radius: 8px;
   position: relative;
-  transition: opacity 0.2s;
+  transition: all 0.2s;
   display: inline-block;
+  margin-bottom: 10px;
+  
+  &.block {
+    display: block;
+    text-align: center;
+  }
   &:hover {
     text-decoration: none;
     opacity: 0.8;
+    transform: translateY(-1px);
+  }
+  &:focus {
+    transform: translateY(1px);
   }
 }
 

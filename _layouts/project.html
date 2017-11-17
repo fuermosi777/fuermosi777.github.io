@@ -15,20 +15,25 @@ layout: default
     <div class="col-1" style="background-color: #{{ page.bgcolor }};"></div>
     <div class="col-1" style="background-color: #{{ page.bgcolor }};"></div>
   </div>
-  <!-- <div class="title-box">
-    <div class="title">{{ page.title }}</div>
-    <div class="subtitle">{{ page.subtitle }}</div>
-    {% if page.website %}
-      <a class="button" href="{{ page.website }}" style="background-color: #{{ page.color }};">View website</a>
-    {% elsif page.downloadlink %}
-      <a class="button" href="{{ page.downloadlink }}" style="background-color: #{{ page.color }};">Download</a>
-    {% elsif page.github %}
-      <a class="button" href="{{ page.github }}" style="background-color: #{{ page.color }};">View on Github</a>
-    {% endif %}
-  </div> -->
 </div>
 
 <div class="main-content">
+  <div class="project-bar">
+    <div class="col-1 project-title">
+      {{ page.title }}
+    </div>
+    <div class="col-2 medium-text project-desc">
+      {{ page.description }}
+    </div>
+    <div class="col-1">
+      {% if page.downloadlink %}
+        <a class="button block" href="{{ page.downloadlink }}" style="background-color: #{{ page.color }};">{{ page.downloadlabel }}</a>
+      {% endif %}
+      {% if page.website %}
+      <a class="button block" href="{{ page.website }}" style="background-color: #{{ page.color }};">Website</a>
+      {% endif %}
+    </div>
+  </div>
   <div class="page-text">
     {{ content }}
   </div>

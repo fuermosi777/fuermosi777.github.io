@@ -3,7 +3,7 @@ layout: default
 title: 中文
 permalink: /cn
 ---
-
+{% include layout-header.html %}
 <div class="main-content">
   <div class="title-bar">
     <div class="col-1 large-text">I write blog</div>
@@ -19,7 +19,7 @@ permalink: /cn
           <div class="col-2 medium-text"> 
             <a href="{{ p.url }}">{{ p.title }}</a>
           </div>
-          <div class="col-1">
+          <div class="col-1 tags">
             {% for t in p.tags %}
               <span class="tag">{{ t }}</span>
             {% endfor %}

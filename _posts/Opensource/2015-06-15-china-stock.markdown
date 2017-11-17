@@ -4,12 +4,13 @@ subtitle: A Python module retrieves stock data
 layout: project
 category: opensource
 bgcolor: FACDAC
+color: e1b89a
 image: china-stock.png
+downloadlabel: Github
+downloadlink: https://github.com/fuermosi777/china-stock
 tags:
 - Python
 ---
-
-## Introduction
 
 [china-stock][1] is a Python module which can retrieves stock data from Chinese Shenzhen and Shanghai Stock exchanges.
 

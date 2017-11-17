@@ -5,11 +5,13 @@ layout: project
 category: opensource
 image: srtjs.png
 bgcolor: 4FC9DE
+color: 4FC9DE
+description: A Javascript SubRip parser.
+downloadlabel: Github
+downloadlink: https://github.com/fuermosi777/srtjs
 tags:
 - JavaScript
 ---
-
-## Introduction
 
 [Srt.js][1] is a simple JavaScript parser for SubRip(.srt) files. You can easily parse a .srt subtitle file in the client side or in the server side using Node.js.
 
