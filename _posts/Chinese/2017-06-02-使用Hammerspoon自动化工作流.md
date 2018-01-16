@@ -264,4 +264,16 @@ hs.hotkey.bind({"ctrl", "alt", "cmd"}, "R", addReminder)
 
 ![](/images/hammerspoon-reminder-demo-3.png)
 
+### Mac上录制键盘宏
+
+作为不是很在行Debugging的Javascript程序员，我经常会花大量时间敲击`console.log`。下面这段代码能够让Hammerspoon录制一段键盘宏，然后按住几个键就可以直接打出来我想要的命令。
+
+```
+function keyStrokes(str)
+    return function()
+        hs.eventtap.keyStrokes(str)
+    end
+end
+hs.hotkey.bind({"ctrl", "alt", "cmd"}, "L", keyStrokes("console.log("))
+
 所有配置文件可以在[这里](https://github.com/fuermosi777/utils/blob/master/hammerspoon/init.lua)找到。

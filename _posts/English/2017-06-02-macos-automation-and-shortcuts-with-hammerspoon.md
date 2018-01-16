@@ -256,4 +256,17 @@ hs.hotkey.bind({"ctrl", "alt", "cmd"}, "R", addReminder)
 
 ![](/images/hammerspoon-reminder-demo-3.png)
 
+### Create a keyboard macro
+
+As a Javascript developer who is not good at debugging, I spent 10% of my coding time typing `console.log`. The following snippet allows me to type that text with a combo of shortcuts, without using any additional applications.
+
+```
+function keyStrokes(str)
+    return function()
+        hs.eventtap.keyStrokes(str)
+    end
+end
+hs.hotkey.bind({"ctrl", "alt", "cmd"}, "L", keyStrokes("console.log("))
+```
+
 You can find all of my configurations [HERE](https://github.com/fuermosi777/utils/blob/master/hammerspoon/init.lua)
