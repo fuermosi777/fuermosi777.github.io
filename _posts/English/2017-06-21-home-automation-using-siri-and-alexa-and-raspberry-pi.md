@@ -132,7 +132,7 @@ Download Arduino IDE for Mac. Download and install [NodeMCU driver](https://kig.
 
 Getting a USB-to-mini USB data sync cable, and connecting NodeMCU with Mac.
 
-Open Arduino IDE, download libraries for NodeMCU. Restart IDE. There should be two items in "port" section in the menu: `bluetooth` and something like `SLAB_USBtoUART`. Open an example file from the menu, click "upload", the blue LED will blink. Click a button at the top right corner of the IDE window to open the console, and select the correct channel number to see the logs.
+Open Arduino IDE, download libraries for NodeMCU (Follow guide [https://github.com/esp8266/Arduino](https://github.com/esp8266/Arduino)). Restart IDE. There should be two items in "port" section in the menu: `bluetooth` and something like `SLAB_USBtoUART`. Open an example file from the menu, click "upload", the blue LED will blink. Click a button at the top right corner of the IDE window to open the console, and select the correct channel number to see the logs.
 
 ## Lights
 
