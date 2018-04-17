@@ -4,6 +4,7 @@ layout: post
 category: English
 tags:
 - macOS
+- High Sierra
 ---
 
 * TOC
