@@ -153,6 +153,10 @@ Install Jekyll:
 
 Clone it to `~/.hammerspoon`.
 
+## Setup HiDPI for 2K monitor
+
+[Guide](https://comsysto.github.io/Display-Override-PropertyList-File-Parser-and-Generator-with-HiDPI-Support-For-Scaled-Resolutions/)
+
 ## Other apps
 
 * Dropbox
