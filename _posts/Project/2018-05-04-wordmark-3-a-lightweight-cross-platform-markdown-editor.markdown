@@ -6,7 +6,7 @@ category: project
 slug: china-stock
 color: 5AB3EE
 bgcolor: cde7f9
-image: wordmark2.png
+image: wordmark3.png
 imagesize: small
 website: http://wordmarkapp.com/
 tags:
@@ -31,12 +31,11 @@ I have learned and applied some cool features from iA writer 3, Byword, Caret, M
 
 Some cool features:
 
-
+- Realtime preview
 - Markdown support
 - Multiple publishing platforms (Wordpress, Ghost, Github, Blogger, etc.)
 - Send Emails
 - Multiple themes
-- Sync scroll
 - Quite/Focus mode
 - Outline
 - Images drag-and-drop and copy-paste upload
