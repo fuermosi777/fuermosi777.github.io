@@ -128,7 +128,7 @@ First, you need a map for this:
 
 ![NodeMCU pin map](/images/iot/nodemcu_pin_map.jpg)
 
-Download Arduino IDE for Mac. Download and install [NodeMCU driver](https://kig.re/2014/12/31/how-to-use-arduino-nano-mini-pro-with-CH340G-on-mac-osx-yosemite.html).
+Download an install drivers mentioned [here](http://wch.cn/download/CH341SER_ZIP.html) and [here](https://www.silabs.com/products/development-tools/software/usb-to-uart-bridge-vcp-drivers).
 
 Getting a USB-to-mini USB data sync cable, and connecting NodeMCU with Mac.
 
