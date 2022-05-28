@@ -1,3 +1,14 @@
+@font-face {
+  font-family: Nunito;
+  src: url(/fonts/Nunito-VariableFont_wght.ttf);
+}
+
+@font-face {
+  font-family: Nunito;
+  src: url(/fonts/Nunito-Italic-VariableFont_wght);
+  font-style: italic;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -9,7 +20,7 @@ html {
 }
 
 body {
-  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+  font-family: 'Nunito', 'Open Sans', Helvetica, Arial, sans-serif;
   line-height: 1.6;
   letter-spacing: 0.04rem;
   margin: 0;

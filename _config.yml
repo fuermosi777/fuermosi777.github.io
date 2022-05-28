@@ -9,11 +9,9 @@
 title: Hao Liu
 email: liuhao1990@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
-   An artisan in the digital age
+   Coding, woodworking, traveling
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://liuhao.im" # the base hostname & protocol for your site
-twitter_username: dabin
-github_username:  fuermosi777
 
 # Build settings
 highlighter: rouge
