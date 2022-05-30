@@ -5,7 +5,7 @@ permalink: /
 
 Hello, it's Hao over here.
 
-I am a designer *slash* engineer, making things (virtually and concretely) for others to be happy to use.
+I am an engineer with designer's mind, making things (virtually and concretely) for others to be happy to use.
 
 # Projects
 
