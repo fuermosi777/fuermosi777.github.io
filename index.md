@@ -19,4 +19,3 @@ I am an engineer with designer's mind, making things (virtually and concretely) 
 # Contact
 
 - [Github](https://github.com/fuermosi777)
-- [LinkedIn](https://www.linkedin.com/in/haoliu1990/)
