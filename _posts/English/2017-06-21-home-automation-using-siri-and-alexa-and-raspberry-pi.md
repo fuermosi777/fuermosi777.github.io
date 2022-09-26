@@ -1,5 +1,5 @@
 ---
-title: Home automation with Siri, Alexa, and Raspberry Pi 3
+title: Home Automation with Siri, Alexa, and Raspberry Pi
 layout: post
 category: English
 tags:
@@ -15,7 +15,7 @@ I am renting an 1b1b apartment in Silicon Valley. It is not a big apartment and 
 
 The wall switch near the door controls one of the outlet in the living room. I connected it to a floor lamp so that I can turn on the light when I got home. If I want to turn it off, however, I have to leave my comfortable sofa and walk to the door to turn the light off. Not saying I am a lazy person, but home is supposed to be a place to make people feel lazy.
 
-Another thing that bothers me is that I often carry a lot of things when I enter or leave the apartment, making myself very hard to take out the key to lock/unlock the door. I just hope the door can be smart like it in some modern cars so that it can lock/unlock itself.
+Another thing that bothers me is that I often carry a lot of things (e.g. groceries) when I enter or leave the apartment, making myself very hard to take out the key to lock/unlock the door. I just hope that the door can be smart like it in some modern cars so that it can lock/unlock itself.
 
 I also have a lot of entertainment devices such TV, projector, sound bar, PS4. It's frustrated every time to have at least 3 remotes on hand and open them one by one.
 

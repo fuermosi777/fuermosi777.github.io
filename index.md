@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: index
 permalink: /
 ---
 
@@ -15,7 +15,3 @@ I am an engineer with designer's mind, making things (virtually and concretely) 
 # Woodwork
 
 - [Polygoon](https://www.etsy.com/shop/Polygoon)
-
-# Contact
-
-- [Github](https://github.com/fuermosi777)

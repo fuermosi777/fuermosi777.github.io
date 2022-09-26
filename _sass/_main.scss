@@ -1,5 +1,11 @@
 $tablet-width: 900px;
 $mobile-width: 480px;
+$text-color-dark-background: #fff;
+$text-color-light-background: #222;
+$dark-background: #222;
+$serif: 'Baskerville', 'Times New Roman', Times, serif;
+$sans: 'Barlow', 'Open Sans', Helvetica, Arial, sans-serif;
+$mono: "Monaco", Consolas, "Liberation Mono", Menlo, Courier, monospace;
 
 @mixin tablet {
   @media (min-width: #{$mobile-width + 1px}) and (max-width: #{$tablet-width}) {
@@ -13,6 +19,11 @@ $mobile-width: 480px;
   }
 }
 
+.nav {
+  background-color: $dark-background;
+  font-family: $sans;
+}
+
 .main-content {
   max-width: 900px;
   margin: 0 auto;
@@ -21,25 +32,27 @@ $mobile-width: 480px;
 
 .large-text {
   line-height: 1.4;
-  color: #515151;
+  color: $text-color-light-background;
   font-size: 24px;
   letter-spacing: 0px;
 }
 
 .medium-text {
-  color: #515151;
+  color: $text-color-light-background;
   font-size: 16px;
   line-height: 1.4;
   letter-spacing: 0px;
 }
 
 .page-text {
-  color: #515151;
+  color: $text-color-light-background;
   font-size: 16px;
   counter-reset: h2;
+  margin-bottom: 6vw;
+  font-family: $sans;
 
   a {
-    color: #5c9cf5;
+    color: $text-color-light-background;
     text-decoration: underline;
   }
 
@@ -49,12 +62,13 @@ $mobile-width: 480px;
 
   li {
     margin-bottom: 10px;
+
     p {
       margin-bottom: 10px;
     }
   }
 
-  li > ul {
+  li>ul {
     margin-top: 10px;
   }
 
@@ -71,6 +85,7 @@ $mobile-width: 480px;
     font-size: 18px;
     margin-bottom: 20px;
     counter-reset: h3;
+
     &:before {
       counter-increment: h2;
       content: counter(h2) ". ";
@@ -82,6 +97,7 @@ $mobile-width: 480px;
     font-weight: bold;
     margin-top: 30px;
     margin-bottom: 10px;
+
     &:before {
       counter-increment: h3;
       content: counter(h2) "." counter(h3) " ";
@@ -109,24 +125,24 @@ $mobile-width: 480px;
   }
 
   code {
-    font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+    font-family: $mono;
     border-radius: 2px;
     margin: 0 1px;
     padding: 2px 4px;
     background: #f4f6fd;
-    font-size: 14px;
+    font-size: 13px;
   }
 
-  h1 > code,
-  h2 > code,
-  h3 > code,
-  h4 > code,
-  h5 > code,
-  h6 > code,
-  p > code,
-  a > code,
-  ul > code,
-  li > code {
+  h1>code,
+  h2>code,
+  h3>code,
+  h4>code,
+  h5>code,
+  h6>code,
+  p>code,
+  a>code,
+  ul>code,
+  li>code {
     color: #a626a4;
   }
 
@@ -159,14 +175,15 @@ $mobile-width: 480px;
     margin-bottom: 20px;
 
     tr:not(:last-child) {
-      border-bottom: 1px solid rgba(0,0,0,0.1);
+      border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     }
 
     td {
       padding: 2px 8px;
     }
+
     td:not(:last-child) {
-      border-right: 1px solid rgba(0,0,0,0.1);
+      border-right: 1px solid rgba(0, 0, 0, 0.1);
     }
   }
 }
@@ -174,41 +191,55 @@ $mobile-width: 480px;
 .page-title {
   font-size: 24px;
   margin-bottom: 3vw;
-  color: rgba(81,81,81,0.9);
+  color: $text-color-light-background;
+  padding-top: 4vw;
+  font-family: $serif;
 }
 
 .page-date {
   color: rgba(81, 81, 81, 0.4);
   margin-bottom: 40px;
+  font-style: italic;
 }
 
 .small-text {
-  color: rgba(81,81,81,0.4);
-  font-size: 14px;
+  color: rgba(81, 81, 81, 0.4);
+  font-size: 13px;
 }
 
 .layout-header {
   padding: 40px 0;
+
   .layout-title {
     a {
-      color: #515151;
+      color: $text-color-dark-background;
     }
   }
+
   .layout-menu {
     padding-top: 20px;
+
     a {
-      color: #515151;
+      color: $text-color-dark-background;
       text-decoration: underline;
       margin-right: 10px;
     }
   }
 }
 
-.list-item {
-  display: flex;
-  a {
-    color: #5c9cf5;
+.list-group {
+  padding: 6vw 0;
+
+  .list-item {
+    display: flex;
+    align-items: center;
+
+    a {
+      font-family: $sans;
+      color: $text-color-light-background;
+    }
   }
+
 }
 
 .m-r {
@@ -222,7 +253,7 @@ $mobile-width: 480px;
 a.button {
   padding: 8px 12px;
   min-width: 70px;
-  box-shadow: 0 0 2px 0 rgba(0,0,0,0.1), 0 2px 2px 0 rgba(0,0,0,0.1);
+  box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.1), 0 2px 2px 0 rgba(0, 0, 0, 0.1);
   font-size: 15px;
   color: white;
   border-radius: 8px;
@@ -230,23 +261,24 @@ a.button {
   transition: all 0.2s;
   display: inline-block;
   margin-bottom: 10px;
-  
+
   &.block {
     display: block;
     text-align: center;
   }
+
   &:hover {
     text-decoration: none;
     opacity: 0.8;
     transform: translateY(-1px);
   }
+
   &:focus {
     transform: translateY(1px);
   }
 }
 
 #markdown-toc {
-  border: 1px solid #E5E5E5;
   border-radius: 3px;
   padding: 10px;
   padding-left: 15px;
@@ -254,18 +286,25 @@ a.button {
   counter-reset: section;
   background-color: #F8F9F9;
 
+
+
   ul {
     padding-left: 15px;
     counter-reset: section;
   }
 
-  ul, li {
+  ul,
+  li {
     list-style-type: none;
+
+    a {
+      text-decoration: none;
+    }
   }
 
   li {
     &:before {
-      content: counters(section, ".") " ";
+      content: counters(section, ".") ". ";
       counter-increment: section;
     }
   }
