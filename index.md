@@ -1,6 +1,7 @@
 ---
-layout: index
+layout: post
 permalink: /
+comment: false
 ---
 
 Hello, it's Hao over here.
