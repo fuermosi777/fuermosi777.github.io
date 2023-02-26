@@ -10,8 +10,9 @@ I am an engineer with designer's mind, making things (virtually and concretely) 
 
 # Projects
 
-- [Wordmark](https://wordmarkapp.com)
-- [Leastimator](/leastimator)
+- [Wordmark](/wordmark): An cross-platform app supporting WYSIWYG markdown preview.
+- [Leastimator](/leastimator): An app to track vehicle lease.
+- [Meny](/meny): A menu bar markdown note app.
 
 # Woodwork
 
