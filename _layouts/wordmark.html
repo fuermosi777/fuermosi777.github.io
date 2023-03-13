@@ -6,16 +6,19 @@ title: WordMark
 <div class="container">
   <header class="d-flex justify-content-center py-3">
     <ul class="nav nav-pills">
-      <li class="nav-item"><a class="nav-link active" href="/wordmark/">WordMark</a></li>
-      <!-- <li class="nav-item"><a class="nav-link" href="/#features">Features</a></li>
-      <li class="nav-item"><a class="nav-link" href="/#download">Download</a></li>
+      <li class="nav-item"><a class="nav-link {% if page.url =="/wordmark/" %}active{% endif %}" href="/wordmark/">WordMark</a></li>
+      <li class="nav-item"><a class="nav-link {% if page.url =="/wordmark/pp.html" %}active{% endif %}" href="/wordmark/pp">Privacy Policy</a></li>
+      <!-- <li class="nav-item"><a class="nav-link" href="/#download">Download</a></li>
       <li class="nav-item"><a class="nav-link" href="/faq">FAQ</a></li>
       <li class="nav-item"><a class="nav-link" href="https://twitter.com/WordMarkApp">Contact</a></li> -->
     </ul>
   </header>
 </div>
 
+<div class="container">
 {{ content }}
+</div>
+
 <div class="container">
   <footer class="pt-4 my-md-5 pt-md-5 border-top">
     <div class="row">
