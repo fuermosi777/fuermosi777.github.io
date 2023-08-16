@@ -3,29 +3,11 @@ layout: default
 title: 中文
 permalink: /cn
 ---
-{% include layout-header.html %}
+
 <div class="main-content">
-  <div class="title-bar">
-    <div class="col-1 large-text">I write blog</div>
-    <div class="col-3"></div>
-  </div>
-  <div class="list-space">
-    {% for p in site.posts %}
-      {% if p.category == 'Chinese' %}
-        <div class="list-item">
-          <div class="col-1 small-text date">
-            {{ p.date | date: '%m/%Y' }}
-          </div>
-          <div class="col-2 medium-text"> 
-            <a href="{{ p.url }}">{{ p.title }}</a>
-          </div>
-          <div class="col-1 tags">
-            {% for t in p.tags %}
-              <span class="tag">{{ t }}</span>
-            {% endfor %}
-          </div>
-        </div>
-      {% endif %}
-    {% endfor %}
-  </div>
+  {% for post in site.posts %}
+    {% if post.category == 'Chinese' %}
+    {% include post_preview.html post=post %}
+    {% endif %}
+  {% endfor %}
 </div>

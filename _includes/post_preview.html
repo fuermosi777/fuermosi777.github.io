@@ -1,0 +1,9 @@
+<a class="layout-post-preview m-b pad" href="{{ include.post.url | relative_url }}">
+  <div class="medium-text c-p bold m-b">{{ include.post.title }}</div>
+
+  <p class="medium-text m-b c-p letter-spacing">{{ include.post.content | strip_html | truncate: 400 }}</p>
+
+  <div class="small-text m-r c-s">
+    {{ include.post.date | date: '%m/%Y' }}
+  </div>
+</a>
