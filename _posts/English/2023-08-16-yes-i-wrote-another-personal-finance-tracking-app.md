@@ -4,6 +4,8 @@ layout: post
 category: English
 ---
 
+<img class="left" src="/images/trellis/app-store.png" width="200">
+
 ## Background Story
 
 I have been using Ivan Pavlov's [Debit and Credit](https://debitandcredit.app/) on iOS and macOS since 2017. In the past 6 years, I have entered 12,500+ transactions out of my 30+ bank accounts. I use the app every time I make a purchase (online or onsite) or receive salary, and I perform manual bank statement reconciliations every two weeks. The app serves as a witness to my financial growth. It's a great app. One of the key reasons I chose it over other apps like Mint was actually due to a missing feature. Apps like Copilot or Mint require users to either enter credentials for their financial institutions or "connect" their banks via Plaid (which has a bad record of [violating](https://www.plaidsettlement.com/) user privacy). However, the Debit and Credit app does not. It forces users to enter each transaction manually, reminiscent of the old days. Honestly speaking, I don't believe many users would opt for this approach, but I did. It's not easy because it means that I can't afford to make any mistakes when recording a single transaction among my 20+ bank accounts (though I did make mistakes, and sometimes I just couldn't figure out where the discrepancy between the app and the bank statement originated from; that's when the "Other" category proves useful).
@@ -40,6 +42,8 @@ Given that this app is a part of my daily routine, my plan involves initiating d
 
 Both my wife and I are acting as testers. We've been using both apps concurrently for over a month to ensure no vital features are overlooked. As of July 2023, the app is in good shape (with the exception of budgeting and recurring transactions, which I plan to add after the MVP launch).
 
+<img class="left" src="/images/trellis/s-home.png" width="200">
+
 With a 2-year-old at home, finding time for coding has proven extremely difficult. Daytimes are occupied by my regular job where I strive to contribute to the world by getting people to watch more ads on their TVs. Thus, my primary opportunity for coding is limited to weekends and the hours between 9pm and midnight, when my son is asleep. Each night, I manage to complete one or two tasks. Over time, the list of MVP requirements has grown progressively longer, until a moment arrived when I decided to exclusively add bugs to the list—a typical product management dilemma.
 
 One major challenge I encountered was the cumbersome nature of CloudKit sharing among different iCloud users. One night, I experienced a complete data loss, forcing me to manually reconstruct 20 days' worth of transactions from Debit and Credit. To this day, I'm uncertain about the cause of this issue, but it highlighted the instability of CloudKit sharing. Consequently, I abandoned attempts in that direction and opted to explore other solutions like Realm sync or SQLite sharing at a later time. As a result, I removed sharing from the MVP list.
@@ -59,6 +63,8 @@ I created a logo using Adobe XD. Featuring an orange background (a linear gradie
 **In-app Subscription**
 
 I've decided to introduce this sooner rather than later. In the MVP, the only "pro" feature allows users to utilize a variety of custom bank logos, which I dedicated a night to create. I plan to incorporate additional features under the Pro category in the future. The revenue generated from subscriptions serves as one of the two driving factors that motivate me to continue enhancing this app (the other being my role as a core user).
+
+<img class="left" src="/images/trellis/s-account-logo.png" width="200">
 
 **Privacy Policy & Terms of Service**
 
