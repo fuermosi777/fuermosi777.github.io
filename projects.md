@@ -35,6 +35,11 @@ I am an engineer with designer's mind, making things (virtually and concretely) 
 </a>
 [Trellis](https://github.com/fuermosi777/trellis-doc) is an iOS app to track personal finance.
 
+<a href="https://github.com/fuermosi777/meny-feedback">
+  <img class="left layout-app-logo" src="/images/meny/logo.webp">
+</a>
+[Meny](https://apps.apple.com/us/app/meny/id1671366999?mt=12) is a macOS menu bar notebook app.
+
 # Woodwork
 
 <a href="https://www.etsy.com/shop/Polygoon">
