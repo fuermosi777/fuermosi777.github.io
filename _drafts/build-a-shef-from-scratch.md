@@ -2,25 +2,37 @@
 layout: post
 ---
 
-1. Start
+1. The Backstory
 
-When we moved into our current house two years ago, we discovered a peculiar piece of land adjacent to it. It wasn't just any land; it was a triangle. The previous owner had used it as a swimming pool, but when they decided to sell the house, they emptied their pockets to fill up the pool. What we were left with was a barren patch of soil with nothing growing on it. However, after a rainy San Francisco Bay Area winter, it decided to transform itself into a mini jungle, with vegetarians sprouting everywhere. Well, mostly Cluster Mallow, which happens to be an edible Chinese weed. It seemed like this plot was on a mission to become a real jungle.
+When we moved into the house we are currently living two years ago, there was a large vacant land on the side of the house. The shape is abnormal -- it's a triangle. That area was used as a swiming pool until the previous owner decided to sell the house and paid a ton of money to fill the pool, leaving a completely bare soil with nothing growing on. After a rainy winter in the San francisco bay area, however, it turns into a mini jungle -- vegatarians grows everywhere, mostly Cluster mallow, a editable Chinese weed. We decided to do something to stop it from growing into a real jungle.
 
-![Image](https://github.com/fuermosi777/fuermosi777.github.io/assets/7303373/a01b138b-02da-47de-b489-41f70f215083)
+![images](https://github.com/fuermosi777/fuermosi777.github.io/assets/7303373/a01b138b-02da-47de-b489-41f70f215083)
 
-So, we decided it was high time to rein in this wild territory. The plan was threefold: tackle the rampant plant growth, construct a shed to house my arsenal of power tools, and create a small garden around it. Now, I didn't want just any run-of-the-mill farmhouse-style shed. No, my vision was a modern lean-to shed, something that could do more than just shelter tools. I wanted a shed with potential – one that could double as a small office or even a gym, adding extra value to the house for that eventual sale in a few years.
+The idea was to remove and control the plants, to build a shed which can hold all my power tools, and to build a small garden around it. I don't want to build a typical farmhouse style shed; instead, I prefer the aesthetic appealing of the modern lean-to shed as I don't want to build a shed-shed, but a shed that can be converted into a small office or a gym, which adds the value to the house when we sell it in a few years.
 
-After binge-watching a slew of "How to Build a Shed" videos on YouTube, I decided to embark on my own DIY adventure. Budget-wise, I didn't have a fixed limit, but I stumbled upon this [decent shed deal at Costco](https://www.costco.com/northport-wood-storage-shed---do-it-yourself-assembly.product.4000051398.html) for around $2,500. Seemed like a fair deal to me, especially when excluding my hourly 'shed-construction maestro' rate.
+After watching a few YouTube videos of "How to build a shed", I decided to apply my own instance. There was no hard budget limit, but there was a [decent shed](https://www.costco.com/northport-wood-storage-shed---do-it-yourself-assembly.product.4000051398.html) on sale in Costco which had a price tag of around $2,500 and I don't want to spend more than that, excluding my hour rate.
 
-Following a few hours of scouring Pinterest and dabbling with Sketchup, I came up with some rudimentary shed designs:
+After a few hours researching across Pinterest and playing with Sketchup, I drew some rough designs of the shed:
 
-![Image](https://github.com/fuermosi777/fuermosi777.github.io/assets/7303373/d172d61c-1843-4057-a231-c3b36ad3c404)
+![Shed design](https://github.com/fuermosi777/fuermosi777.github.io/assets/7303373/d172d61c-1843-4057-a231-c3b36ad3c404)
 
-This design drew inspiration from the 'Autonomous Work Pod.' But here's the twist – it's not your typical lean-to shed; it doesn't have an overhang. Sure, it adds a bit of excitement with the risks of water intrusions and structural complexities, but it's all in the name of that sleek, minimalistic look. I believe it's a trade-off worth making.
+It was a 8x8 shed, with 2 feet in addition to the facade to add a small porch and some accent. It was inspired by [Autonomous work pod](https://www.autonomous.ai/pod-adus). Unlike the regular lean-to shed, there is no overhang to the building. It adds risks of water instrusion and the complexity of structual implementation, in exchange of a minimal look, but I think it worth the trade-off.
 
-So, after returning from a three-week vacation in China, I rolled up my sleeves and got down to business. Now, if you've got a two-year-old whirlwind at home like I do, you understand just how colossal this job seems. On weekdays, I'm juggling work, and on weekends, I'm a full-time entertainer. There's barely any time left for shed-building shenanigans! Thankfully, not a single drop of rain dared to disrupt our grand shed adventure throughout the entire summer and fall. In the world of construction, that's like living in a fairy tale, without the dragons."
+After returning from a 3 week vacation in China, I started the building. If you have a 2-year old little one like I do, you know how impossible this job looks like -- during weekdays I need to work, during weekends I need to spent all my time on him. There is just so little time I have to spend on the building job. Fortunately, there was no a single drop of rain water during the entire summer and fall, which seems to be a dream world in the construction world.
 
 2. Foundation
+
+It is hard to believe that there are more than [13 options](https://www.siteprep.com/shed-foundation-options/) for a shed foundation. The most popular choice would be to build a concrete slab. Prepare the ground, pull out a rectangle shape of lumbers on it and pour the concrete, then it's done. Despite its straightforward, I don't like this idea. First of all, it's not a one-man job. As a starter, I deeply doubt if I am capable of mixing 50 plus bags of concrete. Surely I can order mixed concrete on trucks, but it adds so much complexity and uncertainties such as late delivery. Remember I have a energetic 2-year old? As a parent, I need flexibility. I can also hire some concrete guys to do the work for me. But that means over-budget. Also I recently watched a video from YouTube explaining how concrete industry is one of the biggest contributor to the global warming. Last but not least, concrete slab making the 8x8 small shed a permenent structure, which I dislike very much -- who likes permenent stuff?
+
+I also skipped some other popular options such as gravel pad (too difficult), skid (looks unreliable), etc. As a final decision, I choose to use deck blocks, mostly because I already have 8 of them, and they are cheap and sturdy (around $9 each block).
+
+<img width="661" alt="Screenshot 2023-10-18 at 3 10 51 PM" src="https://github.com/fuermosi777/fuermosi777.github.io/assets/7303373/13a3a828-275f-4b88-8300-84bc2b169fd4">
+
+I used 12 blocks hoping to make the weight spread as evenly as possible. Afterall it's only 8x8, using more than 12 blocks sounds overkill to me. The lumbers are pressure treated 2x6x8, and I added tapes on the top side to add its longevity.
+
+One of the biggest chanllenge was actually to dig 12 holes.
+
+![foundation](https://github.com/fuermosi777/fuermosi777.github.io/assets/7303373/699ef108-3f0f-40bd-ac14-c4a43646cf8a)
 
 3. Framing
 
