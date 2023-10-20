@@ -28,13 +28,23 @@ I also skipped some other popular options such as gravel pad (too difficult), sk
 
 <img width="661" alt="Screenshot 2023-10-18 at 3 10 51 PM" src="https://github.com/fuermosi777/fuermosi777.github.io/assets/7303373/13a3a828-275f-4b88-8300-84bc2b169fd4">
 
-I used 12 blocks hoping to make the weight spread as evenly as possible. Afterall it's only 8x8, using more than 12 blocks sounds overkill to me. The lumbers are pressure treated 2x6x8, and I added tapes on the top side to add its longevity.
+I used 12 blocks hoping to make the weight spread as evenly as possible. Afterall it's only 8x8, using more than 12 blocks sounds overkill to me. I didn't do any math to support myself, but the Autonomous pod only uses 6 blocks and it's larger than my design. I think it will be fine. The lumbers are pressure treated 2x6x8, and I added tapes on the top side to add its longevity.
 
-One of the biggest chanllenge was actually to dig 12 holes.
+Digging 12 holes and make them level is one of the most chanllenging tasks for this job. The ground is not even, so each hole is different in depth. Not to mention that this is a 2-dimentional measurement, making it more difficult to level. Plus that this summer is one of the warmest in history, I can only work in the morning. But, eventually, it's all done.
 
 ![foundation](https://github.com/fuermosi777/fuermosi777.github.io/assets/7303373/699ef108-3f0f-40bd-ac14-c4a43646cf8a)
 
+The block decks were put in the holes and surroundings were filled with leftover white gravels -- technically they are decoration garden stones so it was a bit waste. Also I had to move some maple I planted a year ago and replan some gardening irritation pipes. The entire foundation job took me near a month to complete. 
+
 3. Framing
+
+![7d4ee74462125f6a0778c8335e31143b](https://github.com/fuermosi777/fuermosi777.github.io/assets/7303373/e5733aca-6b1a-4623-aa8e-fdd2f73a5a9d)
+
+
+
+![PXL_20230715_001013064](https://github.com/fuermosi777/fuermosi777.github.io/assets/7303373/8d5b1bbb-6a0b-4fc3-b236-5efcefe4ebce)
+
+
 
 4. Siding/Roofing
 
