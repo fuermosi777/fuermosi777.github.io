@@ -26,28 +26,28 @@ It is hard to believe that there are more than [13 options](https://www.siteprep
 
 I also skipped some other popular options such as gravel pad (too difficult), skid (looks unreliable), etc. As a final decision, I choose to use deck blocks, mostly because I already have 8 of them, and they are cheap and sturdy (around $9 each block).
 
-<img width="661" alt="Screenshot 2023-10-18 at 3 10 51 PM" src="https://github.com/fuermosi777/fuermosi777.github.io/assets/7303373/13a3a828-275f-4b88-8300-84bc2b169fd4">
-
-I used 12 blocks hoping to make the weight spread as evenly as possible. Afterall it's only 8x8, using more than 12 blocks sounds overkill to me. I didn't do any math to support myself, but the Autonomous pod only uses 6 blocks and it's larger than my design. I think it will be fine. The lumbers are pressure treated 2x6x8, and I added tapes on the top side to add its longevity.
+I used 12 blocks hoping to make the weight spread as evenly as possible. Afterall it's only a 8x8 footprint, using more than 12 blocks sounds overkill to me. I didn't do any math to support myself, but the Autonomous pod only uses 6 blocks and it's larger than my design. I think it will be fine. The lumbers are pressure treated 2x6x8, and I added tapes on the top side to add its longevity.
 
 Digging 12 holes and make them level is one of the most chanllenging tasks for this job. The ground is not even, so each hole is different in depth. Not to mention that this is a 2-dimentional measurement, making it more difficult to level. Plus that this summer is one of the warmest in history, I can only work in the morning. But, eventually, it's all done.
 
-![foundation](https://github.com/fuermosi777/fuermosi777.github.io/assets/7303373/699ef108-3f0f-40bd-ac14-c4a43646cf8a)
+![Foundation design and actual](https://github.com/fuermosi777/fuermosi777.github.io/assets/7303373/b8b5af15-751e-475e-a5b8-c25d08b0a0a6)
 
 The block decks were put in the holes and surroundings were filled with leftover white gravels -- technically they are decoration garden stones so it was a bit waste. Also I had to move some maple I planted a year ago and replan some gardening irritation pipes. The entire foundation job took me near a month to complete. 
 
 3. Framing
 
-![7d4ee74462125f6a0778c8335e31143b](https://github.com/fuermosi777/fuermosi777.github.io/assets/7303373/e5733aca-6b1a-4623-aa8e-fdd2f73a5a9d)
+All framing used in this project is 2x4. The bottom plates are pressure treated and the rest are normal lumber. Since it's a lean-to shed, it has a shorter wall and a taller wall. For the shorter wall, the height is 7' and the taller ones are 9'. The 2' difference make it look good, and also provide enough angle for the roof for drainage.
 
+![Framing design and actual](https://github.com/fuermosi777/fuermosi777.github.io/assets/7303373/e7f22b9d-a872-4753-b997-91d65ed99502)
 
-
-![PXL_20230715_001013064](https://github.com/fuermosi777/fuermosi777.github.io/assets/7303373/8d5b1bbb-6a0b-4fc3-b236-5efcefe4ebce)
-
-
+There is no overhang -- but I still plan to add fascia boards to both short and tall wall so that it has a closed roof. Also the water doesn't have to flow down along the wall and cause potential water instrusion. Needless to say, the waterproofing work will be essential in the every step after framing.
 
 4. Siding/Roofing
 
+![Collage maker](https://github.com/fuermosi777/fuermosi777.github.io/assets/7303373/b925c0ed-54c6-4486-a851-aacf232ba32e)
+
+
 5. Exterior walls/windows
 
-6. Interior
+![Collage maker (1)](https://github.com/fuermosi777/fuermosi777.github.io/assets/7303373/d4e94216-3bea-4d31-be11-ae404400de7c)
+
