@@ -1,5 +1,7 @@
 ---
+title: Build a backyard shed from scratch
 layout: post
+category: English
 ---
 
 # The Backstory
