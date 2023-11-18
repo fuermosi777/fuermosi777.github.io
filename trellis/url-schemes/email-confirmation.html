@@ -7,7 +7,8 @@
 <style>
 </style>
 <script>
-window.location = "trellisapp://confirmation?token=1234123&tokenId=124123123";
+  const urlParams = new URLSearchParams(window.location.search);
+  window.location = `trellisapp://confirmation?token=${urlParams.get('token')}&tokenId=${urlParams.get('tokenId')}`
 </script>
 
 <body>
