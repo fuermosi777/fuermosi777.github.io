@@ -1,9 +1,9 @@
-// import * as THREE from 'three';
-// import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+import * as THREE from 'three';
+import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 
 function main() {
   // Create the renderer and add it to the page's body element
-  var renderer = new THREE.WebGLRenderer({ alpha: true });
+  var renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
   renderer.setPixelRatio(window.devicePixelRatio);
   renderer.setSize(window.innerWidth, window.innerHeight);
   document.body.appendChild(renderer.domElement);
@@ -23,12 +23,12 @@ function main() {
   camera.position.set(-15, 10, 20);
 
   // Add the lights
-  var light = new THREE.PointLight(0xffffff, .4);
+  var ambientLight = new THREE.AmbientLight(0xbbbbbb, 3);
+  scene.add(ambientLight);
+
+  var light = new THREE.PointLight(0xffffff, 100, 0);
   light.position.set(10, 10, 10);
   scene.add(light);
-
-  var ambientLight = new THREE.AmbientLight(0xbbbbbb);
-  scene.add(ambientLight);
 
   // Load the textures.
   var textureLoader = new THREE.TextureLoader();
@@ -36,7 +36,8 @@ function main() {
   var pkgTextureBack = textureLoader.load('back.png');
   var pkgTextureLeft = textureLoader.load('left.png');
   var pkgTextureRight = textureLoader.load('right.png');
-  var pkgTextureTopBottom = textureLoader.load('top-bottom.png');
+  var pkgTextureTop = textureLoader.load('top.png');
+  var pkgTextureBottom = textureLoader.load('bottom.png');
 
 
   // Use the linear filter for the textures to avoid blurriness
@@ -44,7 +45,8 @@ function main() {
     = pkgTextureBack.minFilter
     = pkgTextureLeft.minFilter
     = pkgTextureRight.minFilter
-    = pkgTextureTopBottom.minFilter
+    = pkgTextureTop.minFilter
+    = pkgTextureBottom.minFilter
     = THREE.LinearFilter;
 
 
@@ -53,13 +55,14 @@ function main() {
   var pkgBack = new THREE.MeshLambertMaterial({ color: 0xffffff, map: pkgTextureBack });
   var pkgLeft = new THREE.MeshLambertMaterial({ color: 0xffffff, map: pkgTextureLeft });
   var pkgRight = new THREE.MeshLambertMaterial({ color: 0xffffff, map: pkgTextureRight });
-  var pkgTopBottom = new THREE.MeshLambertMaterial({ color: 0xffffff, map: pkgTextureTopBottom });
-
+  var pkgTop = new THREE.MeshLambertMaterial({ color: 0xffffff, map: pkgTextureTop });
+  var pkgBottom = new THREE.MeshLambertMaterial({ color: 0xffffff, map: pkgTextureBottom });
+  // pkgCover.ambient = pkgCover.color
   var materials = [
     pkgRight,          // Right side
     pkgLeft,          // Left side
-    pkgTopBottom,   // Top side
-    pkgTopBottom,   // Bottom side
+    pkgTop,   // Top side
+    pkgBottom,   // Bottom side
     pkgCover,          // Front side
     pkgBack            // Back side
   ];
@@ -69,7 +72,7 @@ function main() {
   scene.add(packaging);
 
   // Create the orbit controls for the camera
-  let controls = new THREE.OrbitControls(camera, renderer.domElement);
+  let controls = new OrbitControls(camera, renderer.domElement);
   controls.enableDamping = true;
   controls.dampingFactor = 0.25;
   controls.enablePan = false;
