@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Authorization Complete</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="Cache-Control" content="no-store" />
+  <meta http-equiv="Pragma" content="no-cache" />
+
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      text-align: center;
+      padding: 40px;
+      background: #ffffff;
+      color: #111;
+    }
+    .spinner {
+      margin: 40px auto;
+      width: 40px;
+      height: 40px;
+      border: 4px solid #e5e7eb;
+      border-top: 4px solid #111;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+    }
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+  </style>
+</head>
+
+<body>
+  <h2>Authorization complete</h2>
+  <p>Redirecting back to the app…</p>
+  <div class="spinner"></div>
+
+  <script>
+    (function () {
+      // Preserve full query string (?code=...&state=...)
+      const query = window.location.search || "";
+
+      // OPTIONAL: Preserve hash fragment if provider uses it
+      const hash = window.location.hash || "";
+
+      // Change this to your app’s scheme or universal link
+      // Example custom scheme:
+      // const redirectUri = "leastimator://oauth/callback";
+      //
+      // Example universal link:
+      // const redirectUri = "https://leastimator.app/oauth/callback";
+
+      const redirectUri = "leastimator://oauth/callback";
+
+      // Final redirect
+      window.location.replace(redirectUri + query + hash);
+
+      // Fallback for browsers that block automatic redirects
+      setTimeout(() => {
+        document.body.innerHTML =
+          "<p>If you are not redirected automatically, <a href='" +
+          redirectUri + query + hash +
+          "'>tap here to return to the app</a>.</p>";
+      }, 2000);
+    })();
+  </script>
+</body>
+</html>
