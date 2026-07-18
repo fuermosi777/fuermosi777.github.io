@@ -123,68 +123,45 @@ layout: null
     }
     .trial-note strong { color: var(--text); }
 
-    /* Gauge mockup (pure CSS, no screenshots needed) */
-    .phone-mock {
-      background: var(--bg-elevated);
-      border: 1px solid var(--border);
-      border-radius: 28px;
-      padding: 28px 24px;
-      max-width: 300px;
+    /* Hero screenshot */
+    .hero-shot {
+      max-width: 260px;
       margin: 0 auto;
+      display: block;
     }
-    .phone-mock .label {
-      font-size: 11px;
-      font-weight: 700;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-      color: var(--text-dim);
-      margin-bottom: 16px;
-      text-align: center;
+    .hero-shot img {
+      width: 100%;
+      display: block;
+      border-radius: 32px;
+      border: 1px solid var(--border);
+      box-shadow: 0 30px 60px -20px rgba(0,0,0,0.6);
     }
-    .gauge {
-      width: 180px;
-      height: 180px;
-      margin: 0 auto 16px;
-      border-radius: 50%;
-      background: conic-gradient(var(--accent) 0deg 252deg, rgba(255,255,255,0.08) 252deg 360deg);
+
+    /* Before/after screenshot pair */
+    .shot-pair {
       display: flex;
-      align-items: center;
       justify-content: center;
-      position: relative;
+      gap: 28px;
+      margin: 0 0 90px;
+      flex-wrap: wrap;
     }
-    .gauge::before {
-      content: "";
-      position: absolute;
-      width: 148px;
-      height: 148px;
-      border-radius: 50%;
-      background: var(--bg-elevated);
-    }
-    .gauge .reading {
-      position: relative;
+    .shot-pair figure {
+      margin: 0;
+      max-width: 220px;
       text-align: center;
     }
-    .gauge .reading .num {
+    .shot-pair img {
+      width: 100%;
       display: block;
-      font-size: 26px;
-      font-weight: 800;
-      color: var(--accent);
+      border-radius: 24px;
+      border: 1px solid var(--border);
+      box-shadow: 0 20px 40px -16px rgba(0,0,0,0.5);
+      margin-bottom: 12px;
     }
-    .gauge .reading .unit {
-      display: block;
-      font-size: 11px;
-      color: var(--text-dim);
-      margin-top: 2px;
-    }
-    .mock-row {
-      display: flex;
-      justify-content: space-between;
+    .shot-pair figcaption {
       font-size: 13px;
-      padding: 10px 0;
-      border-top: 1px solid var(--border);
       color: var(--text-dim);
     }
-    .mock-row strong { color: var(--text); font-weight: 600; }
 
     /* Cost comparison */
     .cost-band {
@@ -394,17 +371,8 @@ layout: null
         </div>
       </div>
 
-      <div class="phone-mock">
-        <div class="label">Today's Status</div>
-        <div class="gauge">
-          <div class="reading">
-            <span class="num">−412</span>
-            <span class="unit">miles under pace</span>
-          </div>
-        </div>
-        <div class="mock-row"><span>Current odometer</span><strong>18,204 mi</strong></div>
-        <div class="mock-row"><span>Projected at turn-in</span><strong>34,910 mi</strong></div>
-        <div class="mock-row"><span>Tesla auto-sync</span><strong>On</strong></div>
+      <div class="hero-shot">
+        <img src="/images/leastimator/screenshot-ontrack.png" alt="Leastimator app showing a vehicle on pace with mileage under the lease limit" />
       </div>
     </section>
 
@@ -421,6 +389,17 @@ layout: null
         <div class="amount">$29.99/yr</div>
         <div class="cap">Leastimator Pro</div>
       </div>
+    </section>
+
+    <section class="shot-pair">
+      <figure>
+        <img src="/images/leastimator/screenshot-ontrack.png" alt="Leastimator showing a car on pace, under the mileage limit" />
+        <figcaption>On pace — you'll know right away</figcaption>
+      </figure>
+      <figure>
+        <img src="/images/leastimator/screenshot-overpace.png" alt="Leastimator showing a car over pace, flagged in red" />
+        <figcaption>Over pace — flagged before it costs you</figcaption>
+      </figure>
     </section>
 
     <section>
