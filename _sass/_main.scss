@@ -1,12 +1,5 @@
 $tablet-width: 900px;
 $mobile-width: 480px;
-$mono: "Monaco", Consolas, "Liberation Mono", Menlo, Courier, monospace;
-
-@mixin tablet {
-  @media (min-width: #{$mobile-width + 1px}) and (max-width: #{$tablet-width}) {
-    @content;
-  }
-}
 
 @mixin mobile {
   @media (max-width: #{$mobile-width}) {
@@ -14,296 +7,112 @@ $mono: "Monaco", Consolas, "Liberation Mono", Menlo, Courier, monospace;
   }
 }
 
-a {
-  &:hover {
-    text-decoration: underline;
-  }
-}
-
 .main-content {
-  max-width: 900px;
+  max-width: 640px;
   margin: 0 auto;
-}
-
-.large-text {
-  line-height: 1.4;
-  font-size: 24px;
-  letter-spacing: 0px;
-}
-
-.medium-text {
-  font-size: 16px;
-  line-height: 1.4;
-  letter-spacing: 0px;
-}
-
-.small-text {
-  color: rgba(81, 81, 81, 0.4);
-  font-size: 13px;
 }
 
 // Color primary
 .c-p {
-  color: #222;
+  color: #1a1a1a;
 }
 // Color secondary
 .c-s {
-  color: #999;
+  color: #8a8a8a;
 }
-// Color link.
+// Color link / accent
 .c-h {
-  color: #007AFE;
-}
+  color: #1a1a1a;
+  border-bottom: 1px solid #d8d8d4;
+  transition: border-color 0.15s ease;
 
-.page-date {
-  color: rgba(81, 81, 81, 0.4);
-  margin-bottom: 40px;
-  font-style: italic;
-}
-
-.layout-header {
-  padding: 40px 0;
-}
-
-.layout-post-preview {
-  display: flex;
-  transition: background-color 0.3s;
-  flex-direction: column;
-  border-radius: 6px;
   &:hover {
     text-decoration: none;
-    background: #f4f4f4;
+    border-color: #1a1a1a;
   }
-}
-
-.letter-spacing {
-  letter-spacing: 0.5px;
-}
-
-.layout-app-logo {
-  width: 100px;
-  height: 100px;
-  border-radius: 20px;
-}
-
-.bold {
-  font-weight: bold;
 }
 
 .pad {
-  padding: 15px;
-}
+  padding: 24px;
 
-.m-r {
-  margin-right: 1vw;
-}
-
-.m-b {
-  margin-bottom: 2vw;
-}
-
-a.button {
-  padding: 8px 12px;
-  min-width: 70px;
-  box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.1), 0 2px 2px 0 rgba(0, 0, 0, 0.1);
-  font-size: 15px;
-  color: white;
-  border-radius: 8px;
-  position: relative;
-  transition: all 0.2s;
-  display: inline-block;
-  margin-bottom: 10px;
-
-  &.block {
-    display: block;
-    text-align: center;
-  }
-
-  &:hover {
-    text-decoration: none;
-    opacity: 0.8;
-    transform: translateY(-1px);
-  }
-
-  &:focus {
-    transform: translateY(1px);
+  @include mobile {
+    padding: 20px;
   }
 }
 
-.layout-post {
-  @extend .c-p;
-  @extend .medium-text;
+// ---------------------------------------------------------------------
+// Header
+// ---------------------------------------------------------------------
 
-  counter-reset: h2;
-  margin-bottom: 6vw;
+.layout-header {
+  padding: 96px 0 72px;
 
-  a {
-    @extend .c-h;
-  }
-
-  p {
-    @extend .m-b;
-  }
-
-  li {
-    margin-bottom: 10px;
-
-    p {
-      margin-bottom: 10px;
-    }
-  }
-
-  li>ul {
-    margin-top: 10px;
-  }
-
-  h1 {
-    @extend .m-b;
-    font-weight: bold;
-    font-size: 20px;
-  }
-
-  h2 {
-    margin-top: 30px;
-    font-weight: bold;
-    font-size: 18px;
-    margin-bottom: 20px;
-    counter-reset: h3;
-
-    &:before {
-      counter-increment: h2;
-      content: counter(h2) ". ";
-    }
-  }
-
-  h3 {
-    font-size: 16px;
-    font-weight: bold;
-    margin-top: 30px;
-    margin-bottom: 10px;
-
-    &:before {
-      counter-increment: h3;
-      content: counter(h2) "." counter(h3) " ";
-    }
-  }
-
-  ul,
-  ol {
-    padding-left: 30px;
-  }
-
-  blockquote {
-    background-color: #f4f6fd;
-    margin: 20px 0;
-    padding: 15px 15px 1px;
-    border-radius: 4px;
-  }
-
-  pre {
-    padding: 15px 20px;
-    background: #f4f6fd;
-    border-radius: 3px;
-    overflow: auto;
-    margin: 15px 0 20px;
-  }
-
-  code {
-    font-family: $mono;
-    border-radius: 2px;
-    margin: 0 1px;
-    padding: 2px 4px;
-    background: #f4f6fd;
-    font-size: 13px;
-  }
-
-  h1>code,
-  h2>code,
-  h3>code,
-  h4>code,
-  h5>code,
-  h6>code,
-  p>code,
-  a>code,
-  ul>code,
-  li>code {
-    color: #a626a4;
-  }
-
-  pre code {
-    background: transparent;
-  }
-
-  img {
-    display: block;
-    margin: 20px auto;
-    text-align: center;
-    max-width: 100%;
-
-    &.left {
-      margin-right: 0;
-      margin-left: 0;
-    }
-  }
-
-  kbd {
-    padding: 3px 5px;
-    font-family: $mono;
-    font-size: 12px;
-    line-height: 10px;
-    color: #70768a;
-    vertical-align: middle;
-    background-color: #fafbfc;
-    border: solid 1px #EBEEF9;
-    border-bottom-color: #d3d6e0;
-    border-radius: 3px;
-    box-shadow: inset 0 -1px 0 #d3d6e0;
-  }
-
-  table {
-    border-collapse: collapse;
-    margin-bottom: 20px;
-
-    tr:not(:last-child) {
-      border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-    }
-
-    td {
-      padding: 2px 8px;
-    }
-
-    td:not(:last-child) {
-      border-right: 1px solid rgba(0, 0, 0, 0.1);
-    }
+  @include mobile {
+    padding: 56px 0 48px;
   }
 }
 
-#markdown-toc {
-  border-radius: 3px;
-  padding: 10px;
-  padding-left: 15px;
+.site-title {
+  font-size: 22px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  margin-bottom: 12px;
+}
+
+.intro {
+  font-size: 17px;
+  line-height: 1.6;
   margin-bottom: 20px;
-  counter-reset: section;
-  background-color: #F8F9F9;
+}
 
-  ul {
-    padding-left: 15px;
-    counter-reset: section;
+// ---------------------------------------------------------------------
+// Projects
+// ---------------------------------------------------------------------
+
+.project-list {
+  padding-bottom: 96px;
+}
+
+.project {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 18px 0;
+  border-bottom: 1px solid #ececea;
+
+  &:first-child {
+    border-top: 1px solid #ececea;
   }
 
-  ul,
-  li {
-    list-style-type: none;
-
-    a {
-      text-decoration: none;
-    }
+  &:hover .project-name {
+    border-color: #1a1a1a;
   }
+}
 
-  li {
-    &:before {
-      content: counters(section, ".") ". ";
-      counter-increment: section;
-    }
-  }
+.project-logo {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  flex-shrink: 0;
+}
+
+.project-body {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.project-name {
+  font-size: 16px;
+  font-weight: 600;
+  color: #1a1a1a;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.15s ease;
+  width: fit-content;
+}
+
+.project-desc {
+  font-size: 14px;
+  color: #8a8a8a;
 }

@@ -1,9 +1,9 @@
 title: Hao
 description: > # this means to ignore newlines until "baseurl:"
-   Coding, Woodworking, Exploring
+   Coder, woodworker.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://liuhao.im" # the base hostname & protocol for your site
-intro: "Hi, I am Hao (👋): a coder, a woodworker, a blogger, and a father."
+intro: "Coder, woodworker."
 
 # Build settings
 highlighter: rouge

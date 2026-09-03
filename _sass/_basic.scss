@@ -3,17 +3,20 @@
 }
 
 html {
-  font-size: 62.5%;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
 }
 
 body {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-size: 17px;
   line-height: 1.6;
-  letter-spacing: 0.04rem;
+  letter-spacing: 0.01em;
+  color: #1a1a1a;
   margin: 0;
-  background-color: rgba(255, 255, 255, .4);
+  background-color: #fdfdfc;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 p,
@@ -35,6 +38,7 @@ li {
 
 a {
   text-decoration: none;
+  color: inherit;
 }
 
 button {
@@ -44,4 +48,8 @@ button {
 a:active,
 a:hover {
   outline: 0;
+}
+
+img {
+  max-width: 100%;
 }
