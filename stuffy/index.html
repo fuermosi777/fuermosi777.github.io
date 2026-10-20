@@ -1,0 +1,70 @@
+---
+layout: null
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Stuffy — Support</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Support for Stuffy, an iPhone app that tracks what your belongings really cost per use." />
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+  <style>
+    :root { color-scheme: light dark; --bg: #fff; --text: #1d1d1f; --dim: #6e6e73; --border: #e5e5ea; --accent: #0a84ff; }
+    @media (prefers-color-scheme: dark) { :root { --bg: #000; --text: #f5f5f7; --dim: #98989d; --border: #2c2c2e; --accent: #4da3ff; } }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--bg); color: var(--text); line-height: 1.55;
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+    .wrap { max-width: 680px; margin: 0 auto; padding: 56px 24px 40px; }
+    h1 { font-size: 36px; letter-spacing: -0.8px; margin: 0 0 6px; }
+    .tag { color: var(--dim); font-size: 18px; margin: 0 0 40px; }
+    h2 { font-size: 20px; margin: 36px 0 10px; }
+    p, li { font-size: 16px; }
+    li { margin-bottom: 8px; }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    dt { font-weight: 600; margin-top: 18px; }
+    dd { margin: 4px 0 0; color: var(--dim); }
+    footer { margin-top: 56px; padding-top: 20px; border-top: 1px solid var(--border); font-size: 13px; color: var(--dim); display: flex; gap: 18px; flex-wrap: wrap; }
+    footer a { color: var(--dim); }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>Stuffy</h1>
+    <p class="tag">Know what your stuff really costs, one wear at a time.</p>
+
+    <h2>Get help</h2>
+    <p>Found a bug, have a question, or want a feature? Email <a href="mailto:liuhao1990@gmail.com?subject=Stuffy%20support">liuhao1990@gmail.com</a>. Include your iOS version and what you were doing, and I'll get back to you as soon as I can.</p>
+
+    <h2>FAQ</h2>
+    <dl>
+      <dt>How is cost per wear calculated?</dt>
+      <dd>Price divided by the number of wears. If you mark an item as sold, the resale price is subtracted from its price first.</dd>
+
+      <dt>What's the difference between Retire and Sold?</dt>
+      <dd>Retire archives an item you're done with. Sold also records what you got for it, which lowers its net cost.</dd>
+
+      <dt>How does the wishlist hold work?</dt>
+      <dd>Add something you want to buy and pick a 7, 14 or 30 day hold. When the hold ends you decide: Bought it, or Decline. Declined items count toward the money you saved by waiting.</dd>
+
+      <dt>Does my data sync between devices?</dt>
+      <dd>Yes, through your own iCloud account. Sign in to iCloud on each device and turn iCloud on for Stuffy. The developer can't see your data.</dd>
+
+      <dt>How do I get my data out?</dt>
+      <dd>Settings → Library → Export CSV.</dd>
+
+      <dt>I'm not getting the daily reminder.</dt>
+      <dd>Turn it on in Settings → Reminders, and make sure notifications are allowed for Stuffy in the iOS Settings app.</dd>
+    </dl>
+
+    <footer>
+      <span>&copy; <span id="year"></span> Hao Liu</span>
+      <a href="/stuffy/pp">Privacy Policy</a>
+      <a href="/">liuhao.im</a>
+    </footer>
+  </div>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
